@@ -1,0 +1,35 @@
+// financial_statements start
+
+.financial_statements{
+    position: relative;
+    margin-bottom: 65px;
+
+    .online_services__title__h2{
+        text-align: left;
+    }
+
+    &__text{
+        @include fontAll(1rem,400,$text);
+        line-height: 130%;
+        margin-top: 20px;
+        text-align: justify;
+
+        h1,h2,h3,h4,h5,h6,strong,em{
+            font-size: 110%;
+            line-height: 135%;
+            font-weight: 500;
+            font-style: normal;
+            display: inline-block;
+        }
+
+        img{
+            margin: 20px 0;
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit:contain;
+        }
+    }
+}
+
+// financial_statements end

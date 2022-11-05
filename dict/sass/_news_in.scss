@@ -1,0 +1,53 @@
+// news_in start
+
+.news_in{
+    position: relative;
+    margin-bottom: 65px;
+
+    &__img{
+        @include fiximg(100%,auto,true);
+        position: relative;
+        img{
+            max-height:700px;
+            object-position: center;
+            object-fit: fill;
+        }
+    }
+
+    &__title__h4{
+        background-color:$fon;
+        @include fontAll(1rem,400,$max);
+        line-height: 100%;
+        padding: 10px 10px;
+        width: fit-content;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__text{
+        @include fontAll(1rem,400,$text);
+        line-height: 135%;
+        margin-top: 20px;
+        text-align: justify;
+
+        h1,h2,h3,h4,h5,h6,strong,em{
+            font-size: 110%;
+            line-height: 135%;
+            font-weight: 500;
+            font-style: normal;
+            display: inline-block;
+        }
+
+        img{
+            margin: 20px 0;
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit:contain;
+        }
+    }
+}
+
+// news_in end

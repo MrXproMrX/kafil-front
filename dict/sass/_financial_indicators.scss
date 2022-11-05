@@ -1,0 +1,236 @@
+// financial_indicators start
+
+.financial_indicators{
+    position: relative;
+    margin-bottom: 65px;
+
+    .online_services__title__h2{
+        text-align: left;
+    }
+
+    &__chart{
+      width: 100%;
+      position: relative;
+      padding-right: 100px;
+      
+      &::after{
+        content:"";
+        background-color:#727272;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+      }
+    }
+
+    &__title__h2{
+      @include fontAll(1.5rem,600,$title);
+      line-height: 130%;
+      margin-bottom: 60px;
+    }
+
+    &__menu{
+      li{
+        position: relative;
+        @extend%transition;
+
+        &:hover{
+          .financial_indicators__menu__link::after{
+            opacity: 1;
+          }
+
+          a{
+            color:$fon;
+          }
+        }
+      }
+
+      li+li{
+        border-top:1px solid #f1f1f1;
+      }
+    }
+
+    &__menu__link{
+      @include fontAll(1.125rem,400,$title);
+      text-transform: uppercase;
+      line-height: 130%;
+      display: inline-block;
+      padding: 20px;
+      @extend%transition;
+
+      &::after{
+        content: "";
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color:$fon;
+        width: 6px;
+        height: 100%;
+        @extend%transition;
+      }
+    }
+
+    &__list{
+      display: grid;
+      grid-template-columns: 300px auto;
+      grid-gap: 80px;
+      align-items: start;
+        .chart {
+            position: relative;
+            width: 100%; 
+            height: 350px;
+            margin-top: 60px;
+            margin-left: 100px;
+          
+            %lines{
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: space-between
+            }
+            .lines-vertical {
+              @extend %lines;
+              flex-direction: column;
+              margin-left: -1.5px;
+              
+            div:not(:last-of-type) {
+                border-top: 1px solid #f1f1f1;
+            }
+              
+              div {
+                position: relative;
+                width: 100%;
+                
+                span {
+                  position: absolute;
+                  border-bottom: 1px solid #f1f1f1;
+                  display: block;
+                  top: -15px;
+                  left: -100px;
+                  width: 100px;
+                  text-align: left;
+                  @include fontAll(0.875rem,400,$title);
+                  line-height: 100%;
+                }
+              }
+            }
+            .statistics {
+              @extend %lines;
+              align-items: flex-end;
+          
+              div {
+                width: 60px;
+                margin: 0 10px;
+                background-color:$fon;
+                display: flex;
+                align-items:center;
+                justify-content: space-between;
+                flex-direction: column;
+                h5{
+                    @include fontAll(0.875rem,400,$title);
+                    line-height: 100%;
+                    margin-top: -18px;
+                    text-align: center;
+                }
+
+                h3{
+                  @include fontAll(0.875rem,400,$title);
+                  line-height: 100%;
+                  margin-bottom: -18px;
+                  text-align: center;
+                }
+              }
+            }
+        }
+    }
+}
+
+// financial_indicators end
+
+
+@media (max-width:1150px){
+  .financial_indicators__list{
+    grid-gap: 50px;
+    grid-template-columns: 250px auto;
+  }
+
+  .financial_indicators__menu__link{
+    font-size: 1rem;
+  }
+
+  .financial_indicators__title__h2{
+    font-size: 1.375rem;
+    margin-bottom: 30px;
+  }
+}
+
+
+@media (max-width:1000px){
+  .financial_indicators__list{
+    grid-gap: 30px;
+    grid-template-columns: auto;
+  }
+
+  .financial_indicators__title__h2{
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+
+  .financial_indicators__menu__link{
+    padding: 15px 15px;
+  }
+}
+
+
+@media (max-width:750px){
+
+  .financial_indicators__chart{
+    overflow-x: scroll;
+    padding-right: 0;
+    padding-left: 5px;
+    padding-bottom: 30px;
+  }
+
+  .financial_indicators__list .chart{
+    width: 500px;
+  }
+
+  .financial_indicators__list .chart .statistics div{
+    width: 40px;
+  }
+
+  .financial_indicators__chart::-webkit-scrollbar {
+    width: 5px;
+    height: 4px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.financial_indicators__chart::-webkit-scrollbar-track {
+    background: $max;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.financial_indicators__chart::-webkit-scrollbar-thumb {
+    background: $text;
+    height: 4px;
+    border-radius: 50px;
+}
+
+.financial_indicators__chart::after{
+  display: none;
+}
+}

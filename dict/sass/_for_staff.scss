@@ -1,0 +1,92 @@
+// for_staff start
+
+.for_staff{
+    position: relative;
+    margin-bottom: 65px;
+
+    &__input{
+        width: 100%;
+        height: 35px;
+        outline: none;
+        padding: 5px 10px;
+        border: 1px solid $text;
+        border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        -o-border-radius: 7px;
+        @include fontAll(1rem,400,$text);
+        margin-bottom: 20px;
+
+        &::placeholder{
+            @include fontAll(1rem,400,$text);
+        }
+    }
+
+    &__title__h4{
+        @include fontAll(1rem,500,$text);
+        line-height: 125%;
+        margin-bottom: 5px;
+    }
+
+    &__button{
+        padding: 10px 20px;
+        background-color:$fon;
+        @include fontAll(1rem,600,$max);
+        line-height: 100%;
+        display: flex;
+        align-items:center;
+        grid-gap: 5px;
+        @extend%transition;
+        border: 2px solid $fon;
+
+        border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        -o-border-radius: 7px;
+
+        &:hover{
+            background-color:$max;
+            color:$fon;
+            border: 2px solid $fon;
+        }
+    }
+
+    &__form__cart{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        grid-gap: 15px;
+    }
+
+    &__menu{
+        display: flex;
+        align-items:center;
+        grid-gap: 10px;
+
+        li+li{
+            .for_staff__menu__link{
+                background-color:$fon;
+            }
+        }
+    }
+
+    &__menu__link{
+        @include fontAll(1.125rem,400,$max);
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        background-color: #4968ac;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+}
+
+// for_staff end

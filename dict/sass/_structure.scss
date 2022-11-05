@@ -1,0 +1,36 @@
+// structure start
+
+.structure{
+    position: relative;
+    margin-bottom: 65px;
+
+    .online_services__title__h2{
+        text-align: left;
+    }
+
+    &__img{
+        @include fiximg(100%,auto,false);
+        margin: 30px 0;
+        img{
+            max-height: 450px;
+            object-position: center;
+        }
+    }
+
+    &__download{
+        display: inline-block;
+        @include fontAll(1rem,400,$max);
+        background-color:$fon;
+        border-radius: 33px;
+        padding: 15px 20px;
+        -webkit-border-radius: 33px;
+        -moz-border-radius: 33px;
+        -ms-border-radius: 33px;
+        -o-border-radius: 33px;
+        span{
+            margin-left: 5px;
+        }
+    }
+}
+
+// structure end

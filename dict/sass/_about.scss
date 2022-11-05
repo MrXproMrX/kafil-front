@@ -1,0 +1,222 @@
+// about start
+
+.about{
+    padding-top: 30px;
+    padding-bottom: 60px;
+    background-repeat:no-repeat !important;
+    background-size:cover !important;
+    background-position:center !important;
+    margin-bottom: 75px;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    &__cart{
+        position: relative;
+        z-index: 10;
+    }
+
+    .online_services__title__h2{
+        color:$max;
+    }
+    
+    &__menu__link{
+        @include fontAll(1.125rem,400,$max);
+        text-transform: uppercase;
+    }
+
+    &__menu{
+        display: flex;
+        align-items:center;
+        flex-wrap: wrap;
+        grid-gap: 20px;
+        margin-bottom: 100px;
+
+        li{
+            position: relative;
+        }
+
+        li+li{
+            padding-left: 40px;
+
+            &::after{
+                content:"";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 20px;
+                height: 10px;
+                background-image:url(../foto/right.svg);
+                background-repeat:no-repeat;
+                background-size:contain;
+                background-position:center;
+
+                transform: translate(0,-50%);
+                -webkit-transform: translate(0,-50%);
+                -moz-transform: translate(0,-50%);
+                -ms-transform: translate(0,-50%);
+                -o-transform: translate(0,-50%);
+            }
+        }
+    }
+}
+
+// about end
+
+
+// about_contint start
+
+.about_contint{
+    position: relative;
+    margin-bottom: 65px;
+
+    .online_services__title__h2{
+        text-align: left;
+    }
+
+    &__text{
+        @include fontAll(1rem,400,$text);
+        line-height: 130%;
+        margin-top: 20px;
+        text-align: justify;
+
+        ul{
+            list-style-type: disc;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            li+li{
+                margin-top: 15px;
+            }
+        }
+
+        h1,h2,h3,h4,h5,h6,strong,em{
+            font-size: 110%;
+            line-height: 135%;
+            font-weight: 500;
+            font-style: normal;
+            display: inline-block;
+        }
+
+        img{
+            margin: 20px 0;
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit:contain;
+        }
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        margin-top: 40px;
+    }
+
+    &__img{
+        @include fiximg(250px,320px,false);
+        margin: 0 auto;
+        margin-top: 20px;
+        img{
+            max-height: 320px;
+        }
+    }
+
+    &__karta{
+        margin-top: 30px;
+    }
+
+    &__img{
+        @include fiximg(100%,auto,false);
+        img{
+            max-height: 450px;
+            object-position: center center;
+        }
+    }
+
+    &__karta__menu{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        grid-gap: 20px;
+        margin-top: 30px;
+    }
+
+    &__title__h4{
+        @include fontAll(1.125rem,400,$title);
+        line-height: 125%;
+        span{
+            margin: 0 2px;
+            font-size: 120%;
+            color:$fon;
+            font-weight: 600;
+        }
+    }
+
+    &__download{
+        @include fontAll(1.125rem,400,$text);
+        line-height: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+    }
+}
+
+// about_contint end
+
+
+@media (max-width:1150px){
+    .about__menu__link {
+        font-size: 1rem;
+    }
+
+    .about__menu{
+        margin-bottom: 60px;
+    }
+
+    .about{
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width:750px){
+    .about_contint__list{
+        grid-template-columns: 1fr;
+    }
+
+    .about_contint__karta__menu{
+        flex-direction: column;
+        grid-gap: 10px;
+        align-items:flex-start;
+    }
+
+    .about__menu{
+        margin-bottom: 30px;
+    }
+
+    .about__menu{
+        grid-gap: 10px;
+    }
+
+    .about{
+        padding-bottom: 30px;
+    }
+
+    .about__menu li:nth-last-child(1) {
+        padding-left: 30px;
+    }
+}

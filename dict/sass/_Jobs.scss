@@ -1,0 +1,97 @@
+// Jobs start
+
+.Jobs{
+    position: relative;
+    margin-bottom: 65px;
+
+    &__title__h3{
+        @include fontAll(1.25rem,400,$title);
+        display: flex;
+        align-items:center;
+        grid-gap: 10px;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 15px;
+        border-bottom: 1px solid #eaeaea;
+        @extend%transition;
+        span{
+            @extend%transition;
+        }
+
+        &:hover{
+            color:$fon;
+            border-bottom: 1px solid $fon;
+        }
+    }
+
+    &__item{
+        border: 1px solid #f3f3f3;
+        padding: 15px;
+    }
+
+    &__text{
+        width: 0;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        @extend%transition;
+    }
+
+    &__title__h4{
+        @include fontAll(1.125rem,600,$title);
+        line-height: 125%;
+        text-transform: uppercase;
+        @extend%transition;
+    }
+
+    &__list{
+
+        .Jobs__item + .Jobs__item{
+            margin-top: 15px;
+        }
+
+        .active{
+            .Jobs__text{
+                width: auto;
+                height: auto;
+                opacity: 1;
+                overflow: inherit;
+                margin-top: 15px;
+
+                .Jobs__title__h4+.Jobs__title__h4{
+                    margin-top: 15px;
+                }
+            }
+
+            .Jobs__title__h3{
+                color:$fon;
+                border-bottom: 1px solid $fon;
+    
+                span{
+                    transform: rotate(180deg);
+                    -webkit-transform: rotate(180deg);
+                    -moz-transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);
+                    -o-transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+// Jobs end
+
+@media (max-width:1150px){
+    .Jobs__title__h3{
+        font-size: 1.125rem;
+    }
+
+    .Jobs__title__h4{
+        font-size: 1rem;
+    }
+
+    .Jobs__item,
+    .Jobs__title__h3{
+        padding: 10px;
+    }
+}

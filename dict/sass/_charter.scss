@@ -1,0 +1,32 @@
+// charter start
+
+.charter{
+    position: relative;
+    margin-bottom: 65px;
+
+    .online_services__title__h2{
+        text-align: left;
+    }
+
+    &__list{
+        margin-top: 20px;
+    }
+
+    &__download{
+        margin-top: 10px;
+        display: inline-block;
+        @include fontAll(1rem,400,$max);
+        background-color:$fon;
+        border-radius: 33px;
+        padding: 15px 20px;
+        -webkit-border-radius: 33px;
+        -moz-border-radius: 33px;
+        -ms-border-radius: 33px;
+        -o-border-radius: 33px;
+        span{
+            margin-left: 5px;
+        }
+    }
+}
+
+// charter end

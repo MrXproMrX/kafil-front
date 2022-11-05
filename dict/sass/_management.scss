@@ -1,0 +1,203 @@
+// management start
+
+.management{
+    position: relative;
+    margin-bottom: 65px;
+
+    &__list__cart{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px 20px;
+        align-items:start;
+    }
+
+    &__img{
+        @include fiximg(100%,360px,true);
+        img{
+            max-height: 360px;
+            object-position: center center;
+        }
+    }
+
+    &__title__h3{
+        @include fontAll(1.5rem,600,$title);
+        line-height: 125%;
+        text-align: center;
+    }
+
+    &__title__h4{
+        @include fontAll(1rem,600,$fon);
+        line-height: 125%;
+        text-align: center;
+    }
+
+    &__item__cart{
+        height: 100%;
+        a{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            flex-direction: column;
+            grid-gap: 20px;
+        }
+    }
+
+    &__menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 65px;
+        .active{
+            background-color:#f2f2f2;
+        }
+    }
+
+    &__menu__link{
+        display: inline-block;
+        text-transform: uppercase;
+        width: 100%;
+        border: 1px solid #eaeaea;
+        @include fontAll(14px,400,$text);
+        line-height: 100%;
+        padding: 25px 10px;
+        text-align: center;
+    }
+}
+
+// management end
+
+
+// management_in start
+
+.management_in{
+    position: relative;
+    margin-bottom: 65px;
+
+    &__item{
+        margin: 0 auto;
+        max-width: 350px;
+        margin-bottom: 20px;
+    }
+
+    &__img{
+        @include fiximg(350px,400px,true);
+        margin-bottom: 10px;
+        img{
+            max-height: 400px;
+            object-position: center center;
+        }
+    }
+
+    &__title__h3{
+        @include fontAll(1.5rem,600,$title);
+        margin-bottom: 10px;
+        line-height: 125%;
+        text-align: center;
+    }
+
+    &__title__h4{
+        @include fontAll(1rem,600,$fon);
+        line-height: 125%;
+        text-align: center;
+    }
+
+    &__title__h2{
+        @include fontAll(1.375rem,600,$title);
+        margin-bottom: 10px;
+        line-height: 125%;
+    }
+
+    &__title__h5{
+        @include fontAll(1.25rem,600,$title);
+        line-height: 125%;
+        margin: 5px 0;
+    }
+
+    &__text{
+        @include fontAll(1rem,400,$title);
+        line-height: 130%;
+
+        h1,h2,h3,h4,h5,h6,strong,em{
+            font-size: 110%;
+            line-height: 135%;
+            font-weight: 500;
+            font-style: normal;
+            display: inline-block;
+        }
+        
+        p+p{
+            margin-top: 5px;
+        }
+
+        img{
+            display: none;
+        }
+    }
+
+    &__item__cart{
+        margin-bottom: 20px;
+    }
+}
+
+// management_in end
+
+@media (max-width:950px){
+    .management__title__h3,
+    .management_in__title__h3{
+        font-size: 1.375rem;
+    }
+
+    .management_in__title__h2{
+        font-size: 1.25rem;
+    }
+
+    .management_in__title__h5{
+        font-size: 1.125rem;
+    }
+
+    .management__list__cart{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .management__item__cart a{
+        grid-gap: 10px;
+    }
+
+    .management__list__cart{
+        grid-gap: 20px;
+    }
+}
+
+
+@media (max-width:650px){
+    .management__title__h3,
+    .management_in__title__h3{
+        font-size: 1.25rem;
+    }
+
+    .management_in__title__h5{
+        font-size: 1rem;
+    }
+
+    .management_in__title__h2{
+        font-size: 1.125rem;
+    }
+
+    .management__list__cart{
+        grid-template-columns: 1fr;
+    }
+
+    .management__item__cart a{
+        grid-gap: 10px;
+    }
+
+    .management__menu{
+        grid-template-columns: 1fr;
+    }
+
+    .management_in__img{
+        width: 100%;
+        height: auto;
+    }
+}
