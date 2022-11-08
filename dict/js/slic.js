@@ -11,7 +11,7 @@ $('.slider__list').slick({
 });
 
 $('.owl-carousel').owlCarousel({
-    loop:true,
+    loop:false,
     margin:10,
     data:false,
     nav:true,
