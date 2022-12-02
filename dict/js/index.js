@@ -177,6 +177,76 @@ $('.management__menu a').on('click', function(event){
 
 // -----===========----------------------------------------------------------
 
+//-----===========----------------------------------------------------------
+
+var i=0;
+	$(".cabinet_worker__menu li h4").each(function(){
+  length
+	i++;
+	$(this).attr("href","#mixsin-"+i);
+});
+
+var i=0;
+	$(".cabinet_worker__item__list").each(function(){
+  length
+	i++;
+	$(this).attr("id","mixsin-"+i);
+});
+
+
+// directions_in id end
+$('.cabinet_worker__cart__list .cabinet_worker__item__list').hide();
+$('.cabinet_worker__cart__list .cabinet_worker__item__list:first').show();
+$('.cabinet_worker__menu li:first').addClass('active');
+
+// Change tab class and display content
+$('.cabinet_worker__menu h4').on('click', function(event){
+  event.preventDefault();
+  $('.cabinet_worker__menu li').removeClass('active');
+  $(this).parent().addClass('active');
+  $('.cabinet_worker__cart__list .cabinet_worker__item__list').hide();
+  $($(this).attr('href')).show();
+});
+
+$(function(){
+  let Catalog_max__pro__ul_link = document.querySelectorAll('.cabinet_worker__menu li');
+
+  for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
+      Catalog_max__pro__ul_link[i].addEventListener('click',function(){
+          for(let j = 0; j<Catalog_max__pro__ul_link.length;j++){
+              Catalog_max__pro__ul_link[j].classList.remove('active');
+          }
+          this.classList.add('active');
+
+      })
+  }
+});
+
+$(document).ready(function(){
+  $('.cabinet_worker__menu li a').click(function(){
+    $('.cabinet_worker__item__list').fadeTo(500, 1)
+    $('.cabinet_worker__item__list').css('display','none');
+  })
+});
+
+
+// directions_in id end
+$('.cabinet_worker__list .cabinet_worker__list__item_id').hide();
+$('.cabinet_worker__list .cabinet_worker__list__item_id:first').show();
+$('.cabinet_worker__item__menu li:first').addClass('active');
+
+// Change tab class and display content
+$('.cabinet_worker__item__menu a').on('click', function(event){
+  event.preventDefault();
+  $('.cabinet_worker__item__menu li').removeClass('active');
+  $(this).parent().addClass('active');
+  $('.cabinet_worker__list .cabinet_worker__list__item_id').hide();
+  $($(this).attr('data-id')).show();
+});
+
+// -----===========----------------------------------------------------------
+
+
 // news start
 
 $(function(){

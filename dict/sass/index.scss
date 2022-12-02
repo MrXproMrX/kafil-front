@@ -18,6 +18,8 @@
 @import '_check_policy';
 @import '_contacts';
 @import '_for_staff';
+@import '_osago';
+@import '_cabinet_worker';
 
 body{
     font-family: 'Proxima Nova', sans-serif;
@@ -65,6 +67,7 @@ body{
         display: flex;
         align-items:center;
         grid-gap: 20px;
+        max-width: 700px;
         li{
             display: flex;
             align-items:center;
@@ -77,6 +80,10 @@ body{
             a+a{
                 font-weight: 400;
             }
+        }
+
+        li+li{
+            flex-wrap: wrap;
         }
     }
 
@@ -696,7 +703,8 @@ body{
         text-align: center;
         text-transform: uppercase;
         @extend%transition;
-
+ 
+        min-height: 50px;
         max-height: 50px;
         -webkit-line-clamp: 2;
         position: relative;
@@ -714,6 +722,7 @@ body{
         margin-bottom: 20px;
         @extend%transition;
 
+        min-height: 75px;
         max-height: 75px;
         -webkit-line-clamp: 4;
         position: relative;
@@ -1600,7 +1609,8 @@ body{
     .Jobs__cart,
     .online_services_in__cart,
     .check_policy__cart,
-    .for_staff__cart{
+    .for_staff__cart,
+    .cabinet_worker__cart{
         margin-left: 30px;
         margin-right: 30px;
     }
@@ -1609,10 +1619,8 @@ body{
         grid-gap: 15px;
     }
 
-    .header__contact li{
-        a+a+a+a+a+a{
-            display: none;
-        }
+    .header__contact{
+        max-width: 650px;
     }
 
     .header__logo{
@@ -1835,7 +1843,9 @@ body{
     .Jobs,
     .online_services_in,
     .check_policy,
-    .for_staff{
+    .for_staff,
+    .cabinet_worker,
+    .cabinet_worker__menu{
         margin-bottom: 35px;
     }
 
@@ -1866,6 +1876,8 @@ body{
 
     .online_services__title__h3{
         font-size: 1.125rem;
+        min-height: 45px;
+        max-height: 45px;
     }
 
     .reviews__title__h3,
@@ -1884,10 +1896,6 @@ body{
         margin-right: 50px;
     }
 
-    .header__contact li a + a + a + a + a{
-        display: none;
-    }
-
     .slider__title__h1{
         font-size: 3rem;
         max-height: 115px;
@@ -1895,6 +1903,10 @@ body{
 
     .our_advantages__title__h3{
         font-size: 3rem;
+    }
+
+    .header__contact {
+        max-width: 600px;
     }
 }
 
@@ -1906,16 +1918,23 @@ body{
     .online_services__title__h3 {
         font-size: 1rem;
         margin-bottom: 10px;
+        min-height: 40px;
+        max-height: 40px;
     }
 
     .online_services__text{
         font-size: 0.875rem;
         margin-bottom: 10px;
+        min-height: 68px;
         max-height: 68px;
     }
 
     .about_us__text {
         margin-top: 10px;
+    }
+
+    .header__contact {
+        max-width: 520px;
     }
 
     .online_services__title__h2 {
@@ -1971,8 +1990,16 @@ body{
 }
 
 @media (max-width:1000px){
-    .header__contact li a + a{
+    .header__contact{
         display: none;
+    }
+
+    .header__top__list{
+        display: block;
+    }
+
+    .header__top__cart{
+        justify-content: space-between;
     }
 
     .about_us__img{
@@ -2048,18 +2075,6 @@ body{
 }
 
 @media (max-width:750px){
-    .header__contact{
-        display: none;
-    }
-
-    .header__top__list{
-        display: block;
-    }
-
-    .header__top__cart{
-        justify-content: space-between;
-    }
-
     .subscribe__list {
         margin-top: 20px;
     }
