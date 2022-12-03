@@ -1,35 +1,35 @@
-@font-face {
-    font-family: "Proxima Nova";
-    src: url("../fonts/proximanova_light.otf") format("opentype");
+  @font-face {
+    font-family: "AvenirNextCyr";
+    src: url("../fonts/avenirnextcyr-thin.ttf") format("truetype");
+    font-weight: 100;
+  }
+
+  @font-face {
+    font-family: "AvenirNextCyr";
+    src: url("../fonts/avenirnextcyr-light.ttf") format("truetype");
     font-weight: 300;
   }
+
   @font-face {
-    font-family: "Proxima Nova";
-    src: url("../fonts/proximanova_regular.ttf") format("truetype");
+    font-family: "AvenirNextCyr";
+    src: url("../fonts/avenirnextcyr-regular.ttf") format("truetype");
     font-weight: 400;
   }
+
   @font-face {
-    font-family: "Proxima Nova";
-    src: url("../fonts/Proxima\ Nova\ Medium.otf") format("opentype");
+    font-family: "AvenirNextCyr";
+    src: url("../fonts/avenirnextcyr-medium.ttf") format("truetype");
     font-weight: 500;
   }
+
   @font-face {
-    font-family: 'Proxiima Nova';
-    src: url('../fontis/ProximaNovaSemibold.otf') format("opentype");
+    font-family: 'AvenirNextCyr';
+    src: url('../fonts/Avenir\ Next\ LT\ Pro\ Bold.otf') format("truetype");
     font-weight: 600;
   }
+
   @font-face {
-    font-family: "Proxima Nova";
-    src: url("../fonts/proximanova_bold.otf") format("opentype");
+    font-family: "AvenirNextCyr";
+    src: url("../fonts/avenirnextcyr-bold.ttf") format("truetype");
     font-weight: 700;
-  }
-  @font-face {
-    font-family: "Proxima Nova";
-    src: url("../fonts/proximanova_extrabold.otf") format("opentype");
-    font-weight: 800;
-  }
-  @font-face {
-    font-family: "Proxima Nova";
-    src: url("../fonts/proximanova_black.ttf") format("truetype");
-    font-weight: 900;
   }
