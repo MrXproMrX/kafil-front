@@ -327,22 +327,22 @@
 
     <!-- osago start -->
 
-    <div class="osago" id="osago">
+    <div class="osago">
         <section class="container">
             <div class="osago__cart">
                 <h2 class="online_services__title__h2">Рассчитать стоимость электронного полиса ОСГО ВТС</h2>
 
                 <div class="osago__list">
-                    <form action="#!" class="osago__list__form" id="osagoSum">
+                    <form action="#!" class="osago__list__form">
                         <section class="osago__list__item">
                             <h3 class="osago__title__h3">Выберите. Вы являетесь</h3> 
 
-                            <input checked type="radio" name="republic" id="republic_1" value="100" v-model="republic">
+                            <input checked type="radio" name="republic" id="republic_1" value="100">
                             <label for="republic_1">
                                 <h4 class="osago__title__h4">Резидент Республики Узбекистан</h4>
                             </label>
 
-                            <input type="radio" name="republic" id="republic_2" value="200" v-model="republic">
+                            <input type="radio" name="republic" id="republic_2" value="200">
                             <label for="republic_2">
                                 <h4 class="osago__title__h4">Нерезидент Республики Узбекистан</h4>
                             </label>
@@ -351,12 +351,12 @@
                         <section class="osago__list__item">
                             <h3 class="osago__title__h3">Выберите. Вы являетесь</h3> 
 
-                            <input checked type="radio" name="individual" id="individual_1" value="150" v-model="individual">
+                            <input checked type="radio" name="individual" id="individual_1" value="150">
                             <label for="individual_1">
                                 <h4 class="osago__title__h4">Физическое лицо</h4>
                             </label>
 
-                            <input type="radio" name="individual" id="individual_2" value="250" v-model="individual">
+                            <input type="radio" name="individual" id="individual_2" value="250">
                             <label for="individual_2">
                                 <h4 class="osago__title__h4">Юридическое лицо</h4>
                             </label>
@@ -375,12 +375,12 @@
 
                             <h3 class="osago__title__h3">Выберите вид транспортного средства</h3> 
 
-                            <input checked type="radio" name="drivers" id="drivers_1" value="400" v-model="drivers">
+                            <input checked type="radio" name="drivers" id="drivers_1" value="400">
                             <label for="drivers_1">
                                 <h4 class="osago__title__h4">Число водителей ограничено</h4>
                             </label>
 
-                            <input type="radio" name="drivers" id="drivers_2" value="500" v-model="drivers">
+                            <input type="radio" name="drivers" id="drivers_2" value="500">
                             <label for="drivers_2">
                                 <h4 class="osago__title__h4">Число водителей не ограничено</h4>
                             </label>
@@ -389,7 +389,7 @@
                         <section class="osago__list__item">
                             <h3 class="osago__title__h3">Выберите период страхования</h3> 
 
-                            <select class="osago__list__select" name="country" id="country">
+                            <select class="osago__list__select" name="country">
                                 <option selected >На 1 год</option>
                                 <option value="1">На 2 год</option>
                                 <option value="2">На 3 год</option>
@@ -399,7 +399,7 @@
 
                             <h3 class="osago__title__h3">Выберите вид транспортного средства</h3>
 
-                            <select class="osago__list__select" name="country" id="country">
+                            <select class="osago__list__select" name="country">
                                 <option selected >Город Ташкент</option>
                                 <option value="1">Город Самарканд</option>
                                 <option value="2">Город Бухара</option>
@@ -408,7 +408,7 @@
 
                             <h3 class="osago__title__h3">Выберите наличие случаев</h3>
 
-                            <select class="osago__list__select" name="country" id="country">
+                            <select class="osago__list__select" name="country">
                                 <option selected >В течение первого и предыдущего обязательного страхования несчастных...</option>
                                 <option value="1">В течение первого 1</option>
                                 <option value="2">В течение первого 2</option>
@@ -417,7 +417,7 @@
 
                             <h3 class="osago__title__h3">Выберите соответствующий пункт для получения скидки</h3>
 
-                            <select class="osago__list__select" name="country" id="country">
+                            <select class="osago__list__select" name="country">
                                 <option selected >Льгот не имеется</option> 
                                 <option value="1">Льгот не имеется 1</option>
                                 <option value="2">Льгот не имеется 2</option>
@@ -426,7 +426,7 @@
 
                             <h3 class="osago__title__h3">Введите или выберите дату вступления в силу электронного полиса</h3>
 
-                            <select class="osago__list__select" name="country" id="country">
+                            <select class="osago__list__select" name="country">
                                 <option selected >15.03.2022</option>
                                 <option value="1">10.04.2022</option>
                                 <option value="2">12.03.2022</option>
@@ -440,7 +440,7 @@
 
                     <div class="osago__cart__item">
                         <h5 class="osago__cart__title__h5">Стоимость электронного полиса ОСГО ВТС:</h5>
-                        <h3 class="osago__cart__title__h3">{{maxin()}} <span>сум</span></h3>
+                        <h3 class="osago__cart__title__h3">650.000 <span>сум</span></h3>
                         <h4 class="osago__cart__title__h4">Способы оплаты</h4>
 
                         <ul class="osago__cart__list">

@@ -268,7 +268,7 @@ $(function(){
 // -----===========----------------------------------------------------------
 
 
-const welcom = document.getElementById('technicalId');
+const welcom = document.querySelector('.technical_work');
 
 setTimeout(()=>{
   addStylesTo(welcom)
