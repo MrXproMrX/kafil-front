@@ -8,6 +8,16 @@
         text-align: left;
     }
 
+    &__logo{
+        margin: 0 auto;
+        margin-bottom: 20px;
+        @include fiximg(220px,72px,true);
+        img{
+            max-height: 72px;
+            object-position: center;
+        }
+    }
+
     &__list{
         margin-top: 30px;
         display: grid;
@@ -94,33 +104,40 @@
     &__list__select{
         width: 100%;
         height: 50px;
-        padding: 10px 30px;
+        padding: 10px 40px 10px 30px;
         background-color:#F3F3F3;
         border:none;
         outline: none;
-        @include fontAll(18px,400,$text);
+        @include fontAll(1.125rem,400,$text);
         line-height: 130%;
         margin-bottom: 15px;
         position: relative;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 7L11 1' stroke='%23D6292D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-position: calc(100% - 20px) 50%;
+        background-repeat: no-repeat;
     }
         
     &__title__h3{
-        @include fontAll(24px,400,$title);
+        @include fontAll(1.5rem,400,$title);
         line-height: 130%;
         margin-bottom: 15px;
     }
 
     &__title__h4{
-        @include fontAll(18px,400,$title);
+        @include fontAll(1.125rem,400,$title);
         line-height: 130%;
     }
 
     &__list__button{
         margin-top: 30px;
-        padding: 20px 30px;
+        padding: 15px 30px;
         background-color:$fon;
-        @include fontAll(16px,600,$max);
-        line-height: 100%;
+        @include fontAll(1rem,600,$max);
+        line-height: 130%;
         display: flex;
         align-items:center;
         justify-content: center;
@@ -146,19 +163,19 @@
     }
 
     &__cart__title__h5{
-        @include fontAll(24px,400,$title);
+        @include fontAll(1.5rem,400,$title);
         line-height: 130%;
         margin-bottom: 10px;
     }
 
     &__cart__title__h3{
-        @include fontAll(30px,600,$title);
+        @include fontAll(1.875rem,600,$title);
         line-height: 130%;
         margin-bottom: 20px;
     }
 
     &__cart__title__h4{
-        @include fontAll(24px,400,$title);
+        @include fontAll(1.5rem,400,$title);
         line-height: 130%;
         margin-bottom: 20px;
     }
@@ -174,12 +191,13 @@
         @include fiximg(100%,55px,true);
         img{
             max-height: 55px;
+            max-width: 140px;
             object-position: center center;
         }
     }
 
     &__cart__title__h6{
-        @include fontAll(18px,600,$title);
+        @include fontAll(1.125rem,600,$title);
         line-height: 130%;
         text-transform: uppercase;
         display: flex;
@@ -193,6 +211,543 @@
             object-position: center center;
         }
     }
+
+    // ----------------------
+
+    &__title2__h3{
+        @include fontAll(1.5rem,600,$title);
+        line-height: 130%;
+        margin-bottom: 15px;
+        span{
+            width: 20px;
+            height: 20px;
+            margin-left: 8px;
+            @include fontAll(1rem,600,$max);
+            padding-top: 2px;
+            background-color:$fon;
+            text-align: center;
+            display: inline-flex;
+            align-items:center;
+            justify-content: center;
+        }
+    }
+
+    &__title6__h3{
+        @include fontAll(1.5rem,600,$title);
+        line-height: 130%;
+        margin-bottom: 15px;
+        margin-top: 20px;
+    }
+
+    &__input__osago2{
+        width: 100%;
+        height: 50px;
+        background-color:#F3F3F3;
+        padding: 10px 30px;
+        border:none;
+        outline: none;
+        @include fontAll(1.125rem,400,$link);
+        line-height: 130%;
+
+        &::placeholder{
+            @include fontAll(1.125rem,400,$link);
+            line-height: 130%;
+        }
+    }
+
+    &__list__osago2{
+        display: grid;
+        grid-template-columns: 240px auto;
+        grid-gap: 20px;
+        margin-bottom: 20px;
+        align-items: end;
+    }
+
+    &__list__osago3{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        margin-bottom: 20px;
+        align-items: end;
+    }
+
+    &__item__osago3{
+        margin-bottom: 20px;
+    }
+
+    &__text__osago2{
+        @include fontAll(1.125rem,400,$title);
+        line-height: 130%;
+        margin-top: 20px;
+    }
+
+    &__model{
+        margin-top: 30px;
+    }
+
+    &__title2__h4{
+        @include fontAll(1.125rem,400,$max);
+        line-height: 130%;
+        padding: 14px 30px;
+        background-color:#B0B0B0;
+        margin-bottom: 15px;
+
+        span{
+            max-height: 20px;
+            -webkit-line-clamp: 1;
+            position: relative;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+        }
+    }
+
+    // ---------------------
+
+    &__cart__osago3{
+        padding-top: 14px;
+        border-top:1px solid #EAEAEA;
+        width: 100%;
+    }
+
+    // ---------------------
+
+    &__cart__osago4{
+        margin-top: 20px;
+    }
+
+    // ---------------------
+
+    &__add_driver{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    &__add_driver__link{
+        @include fontAll(1rem,600,$max);
+        line-height: 130%;
+        text-align: center;
+        background-color:#323232;
+        padding: 15px 30px;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+
+        span{
+            margin-left: 5px;
+        }
+    }
+
+    // ---------------------
+
+    &__delete_driver__link{
+        @include fontAll(1rem,600,$max);
+        line-height: 130%;
+        text-align: center;
+        background-color:$fon;
+        padding: 15px 30px;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        display: flex;
+        align-items:center;
+        grid-gap: 5px;
+        justify-content: center;
+    }
+
+    &__cart__osago6{
+        width: 100%;
+    }
+
+    // -------------------------
+
+    &__table__list{
+        width: 100%;
+        tr{
+            display: flex;
+            width: 100%;
+            height: auto;
+            th{
+                flex: 0 0 100%;
+                width: 100%;
+                height: auto;
+                padding: 10px 30px;
+                @include fontAll(1.5rem,600,$title);
+                line-height: 130%;
+                background-color:#F3F3F3;
+                text-align: left;
+                margin-top: 20px;
+            }
+
+            td{
+                flex: 0 0 50%;
+                width: 100%;
+                padding: 10px 30px;
+                @include fontAll(1.125rem,400,$title);
+                line-height: 130%;
+            }
+
+            td+td{
+                border-left: 1px solid #EAEAEA;
+            }
+        }
+
+        tr+tr{
+            td{
+                border-top:1px solid #EAEAEA;
+            }
+        }
+    }
+
+    &__table__text{
+        @include fontAll(1.125rem,400,$title);
+        line-height: 130%;
+        margin-top: 30px;
+    }
+
+    &__table__title__h4{
+        @include fontAll(1.125rem,400,$title);
+        line-height: 130%;
+        span{
+            color:$fon;
+        }
+    }
+
+    &__table__text_max{
+        @include fontAll(1.125rem,400,$fon);
+        line-height: 130%;
+        position: relative;
+        padding-left: 40px;
+        margin-top: 20px;
+        &::after{
+            content: "!";
+            color:$max;
+            font-size: 1rem;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            padding-top: 5px;
+            
+            width: 30px;
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg width='26' height='23' viewBox='0 0 26 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 0L25.9904 22.5H0.00961876L13 0Z' fill='%23D6292D'/%3E%3C/svg%3E");
+            background-position:center center;
+            background-repeat:no-repeat;
+            background-size:contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    // ------------------------
+
+    &__title_h2{
+        padding-left: 60px;
+        position: relative;
+        &::after{
+            content: "";
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-image: url("data:image/svg+xml,%3Csvg width='46' height='44' viewBox='0 0 46 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35.75 33.5H12.125L7.625 2H2' stroke='%23D6292D' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.26758 6.5H44.7497L37.9997 26.75H11.1604' stroke='%23D6292D' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.75 42.5C20.2353 42.5 22.25 40.4853 22.25 38C22.25 35.5147 20.2353 33.5 17.75 33.5C15.2647 33.5 13.25 35.5147 13.25 38C13.25 40.4853 15.2647 42.5 17.75 42.5Z' stroke='%23D6292D' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M35.75 42.5C38.2353 42.5 40.25 40.4853 40.25 38C40.25 35.5147 38.2353 33.5 35.75 33.5C33.2647 33.5 31.25 35.5147 31.25 38C31.25 40.4853 33.2647 42.5 35.75 42.5Z' stroke='%23D6292D' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat:no-repeat;
+            background-size:contain;
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            transform: translate(0,-50%);
+            -webkit-transform: translate(0,-50%);
+            -moz-transform: translate(0,-50%);
+            -ms-transform: translate(0,-50%);
+            -o-transform: translate(0,-50%);
+        }
+    }
+
+    &__cart__som{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        align-items: start;
+        justify-content: space-between;
+        margin-top: 30px;
+        border-bottom: 1px solid #EAEAEA;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__title8__h4{
+        @include fontAll(1.5rem,400,$title);
+        line-height: 130%;
+        margin-bottom: 10px;
+    }
+
+    &__title8__h3{
+        @include fontAll(1.875rem,600,$title);
+        line-height: 130%;
+    }
+
+    &__list__logo{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        justify-content: space-between;
+        align-items:center;
+        margin: 30px 0;
+
+        li{
+            padding: 22px 25px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12);
+            background-color:$max;
+            @extend%transition;
+            a{
+                @include fiximg(220px,85px,true);
+                img{
+                    max-height: 85px;
+                    max-width: 220px;
+                }
+            }
+
+            &:hover{
+                box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+
+    // -----------------------
+
+    &__cart__osago13{
+        border-top: 1px solid #EAEAEA;
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+
+    &__menu__osago13{
+        li+li{
+            margin-top: 10px;
+        }
+    }
+
+    &__title__h4__osago13{
+        @include fontAll(1.125rem,400,$title);
+        line-height: 130%;
+    }
+}
+
+
+.input-wrap {
+    display: flex;
+    align-items:center;
+    position: relative;
+    padding-left: 40px;
+    margin-top: 15px;
+    cursor: pointer;
+  
+    /* Hide the browser's default radio button */
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+  
+    /* Create a custom radio button */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 24px;
+      width: 24px;
+      border:3px solid #ECECEC;
+      background-color: #ECECEC;
+    }
+    
+    /* When the radio button is checked, add a blue background */
+    input:checked ~ .checkmark {
+        background-repeat:no-repeat;
+        background-size: contain;
+        background-position:center center;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='11' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5L6 10L15 1' stroke='%23D6292D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+  
+    /* Show the indicator (dot/circle) when checked */
+
 }
 
 // osago end
+
+@media (max-width:1200px){
+    .osago__title__h3,
+    .osago__cart__title__h5,
+    .osago__cart__title__h4,
+    .osago__title2__h3,
+    .osago__title6__h3,
+    .osago__table__list tr th,
+    .osago__title8__h4{
+        font-size: 1.375rem;
+    }
+
+    .osago__title8__h3,
+    .osago__cart__title__h3{
+        font-size: 1.625rem;
+    }
+
+    .osago__cart__title__h6,
+    .osago__title__h4,
+    .osago__list__select,
+    .osago__text__osago2,
+    .osago__title2__h4,
+    .osago__table__list tr td,
+    .osago__table__text,
+    .osago__table__text_max,
+    .osago__table__title__h4,
+    .osago__title__h4__osago13{
+        font-size: 1rem;
+    }
+    
+    .osago__list{
+        grid-gap: 40px;
+    }
+
+    .osago__table__cart{
+        overflow-x: scroll;
+    }    
+
+    .osago__table__list{
+        width: 1140px;
+        padding-bottom: 10px;
+    }
+    
+    .osago__table__cart::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+    
+    .osago__table__cart::-webkit-scrollbar-track {
+        background: #F3F3F3;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+    
+    .osago__table__cart::-webkit-scrollbar-thumb {
+        background: $fon;
+        height: 5px;
+        border-radius: 50px;
+    }
+
+    .osago__cart__som{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .osago__list__logo{
+        margin: 20px 0;
+    }
+
+    .osago__cart__osago13{
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width:1000px){
+    .osago__list{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .osago__cart__item,
+    .osago__list__form{
+        width: 100%;
+    }
+
+    .osago__title8__h3{
+        font-size: 1.625rem;
+    }
+
+    .osago__list__logo{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .osago__list__logo li{
+        padding: 20px 22px;
+    }
+}
+
+@media (max-width:700px){
+    .osago__list__logo{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:650px){
+    .osago__list__button,
+    .osago__add_driver{
+        margin-top: 20px;
+    }
+
+    .osago__list__osago2,
+    .osago__list__osago3{
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+    }
+
+    .osago__list__button,
+    .osago__add_driver__link,
+    .osago__add_driver,
+    .osago__delete_driver__link{
+        width: 100%;
+    }
+
+    .osago__title__h3, 
+    .osago__cart__title__h5, 
+    .osago__cart__title__h4, 
+    .osago__title2__h3,
+    .osago__title6__h3,
+    .osago__table__list tr th,
+    .osago__title8__h4{
+        font-size: 1.25rem;
+    }
+
+    .osago__title8__h3{
+        font-size: 1.5rem;
+    }
+
+    .osago__cart__som{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:450px){
+    .osago__cart__list{
+        grid-template-columns: 1fr;
+    }
+
+    .osago__title8__h3{
+        font-size: 1.375rem;
+    }
+
+    .osago__list__logo{
+        grid-template-columns: 1fr;
+    }
+}
