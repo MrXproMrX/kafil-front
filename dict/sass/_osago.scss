@@ -126,6 +126,7 @@
         line-height: 130%;
         margin-bottom: 15px;
         display: inline-block;
+        position: relative;
     }
 
     &__title__h4{
@@ -225,6 +226,9 @@
         @include fontAll(1.5rem,600,$title);
         line-height: 130%;
         margin-bottom: 15px;
+        display: inline-block;
+        position: relative;
+
         span{
             width: 20px;
             height: 20px;

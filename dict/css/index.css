@@ -2290,6 +2290,7 @@ label {
   line-height: 130%;
   margin-bottom: 15px;
   display: inline-block;
+  position: relative;
 }
 .osago__title__h4 {
   font-size: 1.125rem;
@@ -2393,6 +2394,8 @@ label {
   color: #323232;
   line-height: 130%;
   margin-bottom: 15px;
+  display: inline-block;
+  position: relative;
 }
 .osago__title2__h3 span {
   width: 20px;
