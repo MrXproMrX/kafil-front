@@ -125,6 +125,7 @@
         @include fontAll(1.5rem,400,$title);
         line-height: 130%;
         margin-bottom: 15px;
+        display: inline-block;
     }
 
     &__title__h4{
@@ -209,6 +210,12 @@
             height: 54px;
             object-fit: contain;
             object-position: center center;
+        }
+    }
+
+    &__cart__item__input{
+        input{
+            position: relative;
         }
     }
 
@@ -543,7 +550,6 @@
     }
 }
 
-
 .input-wrap {
     display: flex;
     align-items:center;
@@ -583,6 +589,88 @@
   
     /* Show the indicator (dot/circle) when checked */
 
+}
+
+.osago__title__h3[data-title]:hover {
+    position: relative;
+}
+
+.osago__title__h3[data-title]:hover:before {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 99999;
+    content: attr(data-title);
+    margin-top: 0.5em;
+    padding: 10px 15px;
+    width: 250px;    /* change it */
+    overflow: hidden;
+    word-wrap: break-word;
+    font-size: 1rem;
+    line-height: 135%;
+    color: $title;
+    font-weight: 500;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 12%) 0px 2px 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.osago__title__h3[data-title]:hover:before {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.osago__title__h3[data-title]:hover:after {
+    top: auto;
+    bottom: 100%;
+    border: 0.25em dashed transparent;
+    border-top: 0.25em solid #222;
+}
+
+
+
+.osago__title2__h3[data-title]:hover {
+    position: relative;
+}
+
+.osago__title2__h3[data-title]:hover:before {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 99999;
+    content: attr(data-title);
+    margin-top: 0.5em;
+    padding: 10px 15px;
+    width: 250px;    /* change it */
+    overflow: hidden;
+    word-wrap: break-word;
+    font-size: 1rem;
+    line-height: 135%;
+    color: $title;
+    font-weight: 500;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 12%) 0px 2px 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.osago__title2__h3[data-title]:hover:before {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.osago__title2__h3[data-title]:hover:after {
+    top: auto;
+    bottom: 100%;
+    border: 0.25em dashed transparent;
+    border-top: 0.25em solid #222;
 }
 
 // osago end
