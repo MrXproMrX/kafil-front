@@ -4249,6 +4249,26 @@ body {
   -ms-border-radius: 33px;
   -o-border-radius: 33px;
 }
+.news__cart__filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin-bottom: 30px;
+}
+.news__cart__select {
+  width: 100%;
+  height: 50px;
+  padding: 10px 20px;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #eaeaea;
+  font-size: 14px;
+  font-weight: 400;
+  color: #747474;
+  line-height: 100%;
+  outline: none;
+  background-color: #f2f2f2;
+}
 
 .subscribe {
   position: relative;
@@ -5145,6 +5165,10 @@ body {
 @media (max-width: 750px) {
   .subscribe__list {
     margin-top: 20px;
+  }
+  .news__cart__filter {
+    grid-template-columns: auto;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 650px) {
