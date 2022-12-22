@@ -1624,6 +1624,13 @@ body{
             max-height: 30px;
         }
     }
+
+    &__title__h2{
+        @include fontAll(1rem,500,$title);
+        line-height: 120%;
+        text-align: center;
+        padding: 5px 30px 0 30px;
+    }
 }
 
 // footer end

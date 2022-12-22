@@ -4717,6 +4717,14 @@ body {
   object-position: center;
   max-height: 30px;
 }
+.footer__title__h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #323232;
+  line-height: 120%;
+  text-align: center;
+  padding: 5px 30px 0 30px;
+}
 
 @media (max-width: 1725px) {
   .header__top__list,
