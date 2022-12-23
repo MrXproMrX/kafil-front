@@ -1,0 +1,147 @@
+// appeals start
+
+.appeals{
+    position: relative;
+    margin-bottom: 65px;
+
+    &__title__h2{
+        @include fontAll(1.5rem,600,$title);
+        line-height: 135%;
+        margin-bottom: 15px;
+    }
+
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        grid-gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    &__title__h4{
+        @include fontAll(1.125rem,500,$title);
+        line-height: 135%;
+    }
+
+    &__title__h3{
+        @include fontAll(1.375rem,600,$title);
+        line-height: 135%;
+        margin-bottom: 15px;
+    }
+
+    &__from__input{
+        width: 100%;
+        height: 50px;
+        padding: 10px 20px;
+        outline: none;
+        border:none;
+        background-color:#F3F3F3;
+        margin-bottom: 20px;
+        @include fontAll(1rem,400,$link);
+        line-height: 130%;
+
+        &::placeholder{
+            @include fontAll(1rem,400,$link);
+            line-height: 130%;
+        }
+    }
+
+    &__from__textarea{
+        resize: none;
+        width: 100%;
+        height: 160px;
+        padding: 10px 20px;
+        outline: none;
+        border:none;
+        background-color:#F3F3F3;
+        margin-bottom: 20px;
+        @include fontAll(1rem,400,$link);
+        line-height: 130%;
+
+        &::placeholder{
+            @include fontAll(1rem,400,$link);
+            line-height: 130%;
+        }
+    }
+
+    &__border{
+        border-top:1px solid #EAEAEA;
+        padding-top: 15px;
+        margin-top: 20px;
+    }
+
+    &__text{
+        @include fontAll(1.125rem,400,$title);
+        line-height: 135%;
+        margin-bottom: 20px;
+    }
+
+    &__button{
+        height: 60px;
+        padding: 10px 30px;
+        margin-top: 20px;
+        background-color:$fon;
+        @include fontAll(1rem,600,$max);
+        line-height: 100%;
+        display: flex;
+        align-items:center;
+        grid-gap: 5px;
+
+        span{
+            font-size: 1.125rem;
+        }
+
+        border-radius: 33px;
+        -webkit-border-radius: 33px;
+        -moz-border-radius: 33px;
+        -ms-border-radius: 33px;
+        -o-border-radius: 33px;
+    }
+}
+
+// appeals end
+
+
+@media (max-width:1200px){
+    .appeals__title__h2{
+        font-size: 1.375rem;
+        margin-bottom: 10px;
+    }
+
+    .appeals__title__h3{
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+
+    .appeals__title__h4,
+    .appeals__text{
+        font-size: 1rem;
+    }
+
+    .appeals__menu{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width:900px){
+    .appeals__title__h2{
+        font-size: 1.25rem;
+    }
+
+    .appeals__title__h3{
+        font-size: 1.125rem;
+    }
+
+    .appeals__from__input{
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .appeals__from__textarea{
+        height: 120px;
+    }
+
+    .appeals__button {
+        height: 50px;
+    }
+}

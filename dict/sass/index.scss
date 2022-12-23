@@ -20,6 +20,7 @@
 @import '_for_staff';
 @import '_osago';
 @import '_cabinet_worker';
+@import '_appeals';
 
 body{
     font-family: 'AvenirNextCyr', sans-serif;
@@ -1688,7 +1689,8 @@ body{
     .check_policy__cart,
     .for_staff__cart,
     .cabinet_worker__cart,
-    .osago__cart{
+    .osago__cart,
+    .appeals__cart{
         margin-left: 30px;
         margin-right: 30px;
     }
@@ -1924,7 +1926,8 @@ body{
     .for_staff,
     .cabinet_worker,
     .cabinet_worker__menu,
-    .osago{
+    .osago,
+    .appeals{
         margin-bottom: 35px;
     }
 
