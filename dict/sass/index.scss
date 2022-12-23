@@ -21,6 +21,7 @@
 @import '_osago';
 @import '_cabinet_worker';
 @import '_appeals';
+@import '_polls';
 
 body{
     font-family: 'AvenirNextCyr', sans-serif;
@@ -1690,7 +1691,8 @@ body{
     .for_staff__cart,
     .cabinet_worker__cart,
     .osago__cart,
-    .appeals__cart{
+    .appeals__cart,
+    .polls__cart{
         margin-left: 30px;
         margin-right: 30px;
     }
@@ -1927,7 +1929,8 @@ body{
     .cabinet_worker,
     .cabinet_worker__menu,
     .osago,
-    .appeals{
+    .appeals,
+    .polls{
         margin-bottom: 35px;
     }
 

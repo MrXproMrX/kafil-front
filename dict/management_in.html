@@ -35,111 +35,279 @@
     <!-- animation end -->
 
 
-    <!-- footer start -->
+    <!-- header start -->
 
-    <div class="footer" style="background-image: url(foto/footer_fon.png);">
-        <section class="container">
-            <div class="footer__cart">
-                <div class="footer__list">
-                    <div class="footer__logo">
-                        <a href="index.html">
-                            <img src="foto/logo.svg" alt="logo">
-                        </a>
+    <header>
+        <div class="header">
+            <div class="header__top">
+                <section class="container">
+                    <div class="header__top__list">
+                        <ul class="header__contact">
+                            <li>
+                                <span><i class="fas fa-envelope"></i></span>
+                                <a href="mailto:info@kafil.uz" class="header__link__contact">info@kafil.uz</a>
+                            </li>
+                            <li>
+                                <span><i class="fas fa-phone-alt"></i></span>
+                                <a href="tel:71 200 04 14" class="header__link__contact">71 200 04 14,</a>
+                                <a href="tel:71 2373326" class="header__link__contact">71 2373326,</a>
+                                <a href="tel:71 2375014" class="header__link__contact">71 2375014,</a>
+                                <a href="tel:71 2370284" class="header__link__contact">71 2370284,</a>
+                                <a href="tel:71 2370491" class="header__link__contact">71 2370491,</a>
+                                <a href="tel:71 2370254" class="header__link__contact">71 2370254</a>
+                            </li>
+                        </ul>
+
+                        <section class="header__top__cart">
+                            <!-- Ko'zi ojizlar uchun start -->
+							
+							<div class="header__accessibility__mrx">
+								<div class="header__accessibility">
+									<span class="header__accessibility__icon" id="haAccessibilityIcon">
+										<button class="header__button__top"><span><i class="fas fa-eye"></i></span> для слабовидящих</button>
+									</span>
+		
+									<div class="header__accessibility__dropdown ha__dropdown">
+										<div class="ha__dropdown__content">
+											<h4 class="ha__title">View:</h4>
+											<div class="custom-form-group">
+												<div class="custom-form-check">
+													<input
+														id="normalDesign"
+														name="designPatterns"
+														class="custom-form-check-input"
+														type="radio"
+														value="normalDesign"
+													/>
+													<label class="custom-form-check-label" for="normalDesign">
+														Normal design
+													</label>
+												</div>
+		
+												<div class="custom-form-check">
+													<input
+														id="blackAndWhiteDesign"
+														name="designPatterns"
+														class="custom-form-check-input"
+														type="radio"
+														value="blackAndWhiteDesign"
+													/>
+													<label class="custom-form-check-label" for="blackAndWhiteDesign">
+														Black and white design
+													</label>
+												</div>
+											</div>
+		
+											<h4 class="ha__title">Font size:</h4>
+											<div class="ha__btn-group">
+												<button id="fontSizeMin" class="ha_btn">A-</button>
+												<button id="fontSizeDefault" class="ha_btn">A</button>
+												<button id="fontSizeMax" class="ha_btn">A+</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						    <!-- Ko'zi ojizlar uchun end -->
+
+                            <a href="#modal1" class="header__button modal-trigger">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            
+                            <a href="foto/YTH_Xabarnomasi.pdf" target="_blank" class="header__top__link">Протокол ДТП</a>
+                        </section>
                     </div>
-
-                    <section class="footer__item">
-
-                        <ul class="footer__menu">
-                            <li>
-                                <a href="index.html" class="footer__menu__link">ГЛАВНАЯ</a>
-                            </li>
-
-                            <li>
-                                <a href="about.html" class="footer__menu__link">О НАС</a>
-                            </li>
-
-                            <li>
-                                <a href="for_individuals.html" class="footer__menu__link">Физическим лицам</a>
-                            </li>
-
-                            <li>
-                                <a href="legal_entities.html" class="footer__menu__link">Юридическим лицам</a>
-                            </li>
-                        </ul>
-
-                        <ul class="footer__menu">
-                            <li>
-                                <a href="news.html" class="footer__menu__link">НОВОСТИ</a>
-                            </li>
-
-                            <li>
-                                <a href="gallery.html" class="footer__menu__link">ГАЛЕРЕЯ</a>
-                            </li>
-
-                            <li>
-                                <a href="contacts.html" class="footer__menu__link">КОНТАКТЫ</a>
-                            </li>
-
-                            <li>
-                                <a href="for_staff.html" class="footer__menu__link">ДЛЯ СОТРУДНИКОВ</a>
-                            </li>
-                        </ul>
-
-                    </section>
-                </div>
-
-                <ul class="footer__brint">
-                    <li>
-                        <a href="#!" class="footer__brint__link">
-                            <img src="foto/footer__brint_1.png" alt="footer__brint">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#!" class="footer__brint__link">
-                            <img src="foto/footer__brint_2.png" alt="footer__brint">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#!" class="footer__brint__link">
-                            <img src="foto/footer__brint_3.png" alt="footer__brint">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#!" class="footer__brint__link">
-                            <img src="foto/footer__brint_4.png" alt="footer__brint">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#!" class="footer__brint__link">
-                            <img src="foto/footer__brint_5.png" alt="footer__brint">
-                        </a>
-                    </li>
-                </ul>
+                </section>
             </div>
-        </section>
 
-        <div class="footer__bottom">
-            <section class="container">
-                <div class="footer__bottom__list">
-                    <h5 class="footer__bottom__title__h5">“KAFIL-SUG‘URTA” Все права защищены</h5>
-                    <h5 class="footer__bottom__title__h5">© Copyright 2022 - Web developed by <span>Dora Development</span></h5>
-                    <div class="footer__bottom__img">
-                        <a href="https://www.uz/ru/res/visitor/index?id=45700" target="_blank">
-                            <img src="foto/footer_icons.png" alt="footer_icons">
-                        </a>
-                    </div>
+            <div class="header__bottom clearfix">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="foto/logo.svg" alt="logo">
+                    </a>
                 </div>
 
-                <h2 class="footer__title__h2">Footer</h2>
-            </section>
-        </div>
-    </div>
+                <section class="header__ru__menu">
+                <!-- language start -->
+    
+                <div class="header__ru">
+                                
+                    <div class="header__ru_cart dropdown-trigger"data-target='dropdown1'>
+                        <a data-target='dropdown1' class="header__en__link">RU</a>
+                        <span><i class="fas fa-angle-down"></i></span>
+                    </div>
+                    
+                    <div class="header__ru_none dropdown-content" id='dropdown1'>
+                        <div class="header__ru_list active">
+                            <a href="#!-1" class="header__en__link">RU</a>
+                        </div>
+                        
+                        <div class="header__ru_list">
+                            <a href="#!-2" class="header__en__link">EN</a>
+                        </div>
+                        
+                        <div class="header__ru_list">
+                            <a href="#!-3" class="header__en__link">UZ</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- language start -->
 
-    <!-- footer end -->
+                    <button class="header__bottom__burger sidenav-trigger" data-target="slide-out"><i class="fas fa-bars"></i></button>
+                
+                </section>
+
+                <section class="container">
+                    <div class="header__bottom__list sidenav" id="slide-out">
+                        <ul class="header__bottom__menu">
+                            <li>
+                                <a href="index.html" class="header__menu__link">ГЛАВНАЯ</a>
+                            </li>
+
+                            <li>
+                                <h4 class="header__bottom__link">О НАС <span><i class="fas fa-chevron-down"></i></span></h4>
+
+                                <ul class="header__bottom__none">
+                                    <li>
+                                        <a href="about.html" class="header__none__link">О компании</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="collegiate.html" class="header__none__link">Коллегиальные и консультационные органы</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="structure.html" class="header__none__link">Структура Компании</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="management.html" class="header__none__link">Руководство</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="licenses.html" class="header__none__link">Лицензии и сертификаты</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="for_individuals.html" class="header__menu__link">Физическим лицам</a>
+                            </li>
+
+                            <li>
+                                <a href="legal_entities.html" class="header__menu__link">юридическим лицам</a>
+                            </li>
+
+                            <li>
+                                <h4 class="header__bottom__link">ОТКРЫТЫЕ ДАННЫЕ<span><i class="fas fa-chevron-down"></i></span></h4>
+
+                                <ul class="header__bottom__none">
+                                    <li>
+                                        <a href="facts.html" class="header__none__link">Стратегия компании</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="facts.html" class="header__none__link">Бизнес-план</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="financial_indicators.html" class="header__none__link">Финансовые показатели</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="financial_statements.html" class="header__none__link">Финансовая отчетность</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="facts.html" class="header__none__link">Аудиторское заключение</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="facts.html" class="header__none__link">Аффилированные лица</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="facts.html" class="header__none__link">Существенные факты</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="charter.html" class="header__none__link">Устав</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="charter.html" class="header__none__link">Свидетельство о государственной регистрации юридического лица</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="charter.html" class="header__none__link">Решения Общего собрания акционеров</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="facts.html" class="header__none__link">Приобретение акций</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="charter.html" class="header__none__link">Кодекс корпоративного управления</a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <h4 class="header__bottom__link">НОВОСТИ<span><i class="fas fa-chevron-down"></i></span></h4>
+
+                                <ul class="header__bottom__none">
+                                    <li>
+                                        <a href="news.html" class="header__none__link">Новости</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="news.html" class="header__none__link">Тендеры</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="Jobs.html" class="header__none__link">Вакансии</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="gallery.html" class="header__none__link">Галерея</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="appeals.html" class="header__none__link">Обращения</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="polls.html" class="header__none__link">Опросы</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="contacts.html" class="header__menu__link">КОНТАКТЫ</a>
+                            </li>
+                        </ul>
+
+                        <a href="check_policy.html" class="header__button__link">Проверка полиса</a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        
+        <div class="header__form__cart modal" id="modal1">
+            <form action="#!" class="header__form">
+                <input class="header__form__input" placeholder="Поиск" type="text">
+                <button class="header__form__button" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <!-- header end -->
 
 
     <!-- about start -->

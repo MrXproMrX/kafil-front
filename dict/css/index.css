@@ -3357,6 +3357,45 @@ label {
     height: 50px;
   }
 }
+.polls {
+  position: relative;
+  margin-bottom: 65px;
+}
+.polls__button__list {
+  display: flex;
+  align-items: center;
+  grid-gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.polls__button {
+  height: 50px;
+  padding: 10px 30px;
+  margin-top: 10px;
+  background-color: #D6292D;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+  border-radius: 33px;
+  -webkit-border-radius: 33px;
+  -moz-border-radius: 33px;
+  -ms-border-radius: 33px;
+  -o-border-radius: 33px;
+}
+.polls__button span {
+  font-size: 1.125rem;
+}
+
+@media (max-width: 1200px) {
+  .polls__button__list {
+    margin-bottom: 20px;
+    grid-gap: 20px;
+  }
+}
 body {
   font-family: "AvenirNextCyr", sans-serif;
   box-sizing: border-box;
@@ -4918,7 +4957,8 @@ body {
 .for_staff__cart,
 .cabinet_worker__cart,
 .osago__cart,
-.appeals__cart {
+.appeals__cart,
+.polls__cart {
     margin-left: 30px;
     margin-right: 30px;
   }
@@ -5120,7 +5160,8 @@ body {
 .cabinet_worker,
 .cabinet_worker__menu,
 .osago,
-.appeals {
+.appeals,
+.polls {
     margin-bottom: 35px;
   }
   .contacts__list {
