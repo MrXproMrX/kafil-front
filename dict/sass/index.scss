@@ -136,6 +136,24 @@ body{
 
         li+li{
             flex-wrap: wrap;
+
+            a{
+                &::after{
+                    content: ",";
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                }
+            }
+
+            a:nth-last-child(-n+1){
+                &::after{
+                    content: ",";
+                    display:none;
+                    width: 5px;
+                    height: 5px;
+                }
+            }
         }
     }
 
@@ -236,7 +254,7 @@ body{
     }
 
     &__logo{
-        @include fiximg(220px,72px,true);
+        @include fiximg(220px,72px,false);
         margin-left: 60px;
         img{
             max-height: 72px;
@@ -317,44 +335,38 @@ body{
     &__ru_list{
         @include fontAll(0.875rem,400,$title);
         line-height: 100%;
-        padding: 5px;
+        margin-top: 2px;
+        text-align: center;
+        background: #f8f8f8;
+        box-shadow: 0px 2px 10px rgb(0 0 0 / 12%);
+        a{
+            padding: 5px 10px;
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+        }
     }
 
     &__ru_none{
         position: absolute;
-        border: 1px solid #EAEAEA;
         z-index: 10;
-        margin-top: 5px;
+        margin-top: 15px;
         top: 100% !important;
         left: 30px !important;
         width: 60px !important;
         height: auto !important;
-        background: #fff;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12);
         text-align: center;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
         overflow: hidden;
         .header__en__link{
             color:$title;
             font-weight: 400;
             text-transform: uppercase;
         }
-
-        .active{
-            width: 100%;
-            background-color:$fon;
-            a{
-                color:$max;
-            }
-        }
     }
 
     &__ru_cart{
         background-color: #F8F8F8;
+        position: relative;
         width: 100%;
         height: 100%;
         display: flex;
@@ -367,6 +379,30 @@ body{
 
         span{
             color:$fon;
+        }
+
+        &::after{
+            content: "";
+            display: block;
+            background-color: #F8F8F8;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -25px;
+            left: 0;
+            z-index: -1;
+        }
+
+        &::before{
+            content: "";
+            display: block;
+            background-color: #F8F8F8;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            z-index: -1;
         }
     }
 
@@ -874,7 +910,7 @@ body{
             margin-bottom: 10px;
             margin-left: 20px;
             li+li{
-                margin-top: 15px;
+                margin-top: 5px;
             }
         }
 
@@ -1715,7 +1751,20 @@ body{
     }
 }
 
-@media (max-width:1550px){
+@media (max-width:1510px){
+    .header__bottom__menu{
+        grid-gap: 15px;
+        li{
+            display: none;
+        }
+
+        li+li{
+            display: list-item;
+        }
+    }
+}
+
+@media (max-width:1300px){
     .header__bottom__list{
         position: fixed;
         top: 0;
@@ -1878,6 +1927,13 @@ body{
         background: $title;
         height: 4px;
         border-radius: 50px;
+    }
+
+    .header__bottom__menu{
+        grid-gap: 15px;
+        li{
+            display: list-item;
+        }
     }
 }
 
