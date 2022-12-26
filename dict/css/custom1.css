@@ -270,15 +270,6 @@ html {
     .header__accessibility__icon{
         font-size: 0.75rem;
     }
-
-    .header__accessibility__dropdown{
-        left: 30%;
-        transform: translate(-30%,0);
-        -webkit-transform: translate(-30%,0);
-        -moz-transform: translate(-30%,0);
-        -ms-transform: translate(-30%,0);
-        -o-transform: translate(-30%,0);
-    }
 }
 
 @media (max-width:1150px){
@@ -292,10 +283,6 @@ html {
 
     .header__item__link{
         font-size: 0rem !important;
-    }
-
-    .header__accessibility__dropdown {
-        left: -150px;
     }
 }
 

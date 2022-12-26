@@ -3518,15 +3518,21 @@ body {
   line-height: 120%;
 }
 .header__button__top {
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: #FFFFFF;
-  line-height: 120%;
-  background-color: rgba(255, 255, 255, 0);
   display: flex;
   align-items: center;
-  grid-gap: 5px;
-  text-transform: uppercase;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #D6292D;
 }
 .header__top__cart {
   display: flex;
