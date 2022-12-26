@@ -3361,25 +3361,48 @@ label {
   position: relative;
   margin-bottom: 65px;
 }
-.polls__button__list {
+.polls__list form button + button {
+  margin-left: 20px;
+}
+.polls__list .active .polls__result {
+  margin-bottom: 20px;
+  opacity: 1;
+  overflow: inherit;
+  width: 100%;
+  height: auto;
+}
+.polls__result {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.polls__result__menu li {
   display: flex;
   align-items: center;
-  grid-gap: 30px;
-  margin-bottom: 30px;
+  justify-content: space-between;
   flex-wrap: wrap;
+  padding: 1rem 1.5rem;
+  border-bottom: 2px solid #fff;
+  background-color: #f0f4f8;
+}
+.polls__result__menu li span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #323232;
+  line-height: 130%;
 }
 .polls__button {
   height: 50px;
   padding: 10px 30px;
   margin-top: 10px;
+  margin-bottom: 20px;
   background-color: #D6292D;
   font-size: 1rem;
   font-weight: 600;
   color: #FFFFFF;
   line-height: 100%;
-  display: flex;
-  align-items: center;
-  grid-gap: 5px;
+  display: inline-block;
   border-radius: 33px;
   -webkit-border-radius: 33px;
   -moz-border-radius: 33px;

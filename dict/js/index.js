@@ -284,3 +284,21 @@ $(document).ready(function(){
     $('.technical_work').css('display','none');
   })
 });
+
+
+// -------------------------------===========-------------------------------
+
+const buttons_4 = document.querySelectorAll('.pollsButton');
+buttons_4.forEach(function(button, index) {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    this.parentNode.classList.toggle('active');
+    
+    buttons_4.forEach(function(button2, index2) {
+      if ( index !== index2 ) {
+        button2.parentNode.classList.remove('active');
+      }
+    });
+  });
+});

@@ -4,24 +4,56 @@
     position: relative;
     margin-bottom: 65px;
 
-    &__button__list{
-        display: flex;
-        align-items: center;
-        grid-gap: 30px;
-        margin-bottom: 30px;
-        flex-wrap: wrap;
+    &__list{
+        form{
+            button + button{
+                margin-left: 20px;
+            }
+        }
+
+        .active{
+            .polls__result{
+                margin-bottom: 20px;
+                opacity: 1;
+                overflow: inherit;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &__result{
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    &__result__menu{
+        li{
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 1rem 1.5rem;
+            border-bottom: 2px solid #fff;
+            background-color:#f0f4f8;
+            span{
+                @include fontAll(1rem,400,$title);
+                line-height: 130%;
+            }
+        }
     }
 
     &__button{
         height: 50px;
         padding: 10px 30px;
         margin-top: 10px;
+        margin-bottom: 20px;
         background-color:$fon;
         @include fontAll(1rem,600,$max);
         line-height: 100%;
-        display: flex;
-        align-items:center;
-        grid-gap: 5px;
+        display: inline-block;
 
         span{
             font-size: 1.125rem;
