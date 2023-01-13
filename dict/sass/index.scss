@@ -106,6 +106,7 @@ body{
         width: 100%;
         background-color: $fon;
         padding: 10px 0;
+        position: relative;
     }
 
     &__top__list{
@@ -503,6 +504,17 @@ body{
         display: none;
         background-color:transparent;
         margin-right: 10px;
+    }
+
+    // -----------------------
+
+    &__lift__img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        @include fiximg(250px,100px,false);
     }
 }
 
@@ -1756,6 +1768,12 @@ body{
 
     .header__bottom__menu {
         grid-gap: 20px;
+    }
+}
+
+@media (max-width:1550px){
+    .header__lift__img{
+        display: none;
     }
 }
 
