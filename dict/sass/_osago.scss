@@ -240,6 +240,7 @@
             display: inline-flex;
             align-items:center;
             justify-content: center;
+            cursor: pointer;
         }
     }
 
@@ -271,7 +272,7 @@
         grid-template-columns: 240px auto;
         grid-gap: 20px;
         margin-bottom: 20px;
-        align-items: end;
+        align-items: start;
     }
 
     &__list__osago3{
@@ -319,7 +320,6 @@
 
     &__cart__osago3{
         padding-top: 14px;
-        border-top:1px solid #EAEAEA;
         width: 100%;
     }
 
@@ -427,7 +427,7 @@
     &__table__title__h4{
         @include fontAll(1.125rem,400,$title);
         line-height: 130%;
-        span{
+        span,a{
             color:$fon;
         }
     }
@@ -552,6 +552,104 @@
         @include fontAll(1.125rem,400,$title);
         line-height: 130%;
     }
+
+    //-----------------------
+
+    &__passport{
+        display: none;
+        position: fixed;
+        outline: none;
+        left: 0;
+        right: 0;
+        max-height: 70%;
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        overflow-y: auto;
+        border-radius: 2px;
+        will-change: top, opacity;
+        max-width: 660px;
+        background-color:$max;
+
+        &__title__img{
+            @include fiximg(100%,100%,false);
+            padding: 0 20px 20px 20px;
+
+            img{
+                object-position: top center;
+            }
+        }
+
+        &__title__h2{
+            @include fontAll(1.35rem,600,$text);
+            line-height: 135%;
+        }
+
+        &__list{
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            grid-gap: 10px;
+            padding: 20px;
+            border-bottom: 1px solid #dedede;
+        }
+
+        &__button{
+            @include fontAll(22px,500,$text);
+            line-height: 100%;
+            background-color:transparent;
+        }
+
+        &__title__h4{
+            @include fontAll(14px,400,$fon);
+            line-height: 135%;
+            padding-top: 5px;
+        }
+    }
+
+    &__list__cart__checkbox{
+        margin-bottom: 20px;
+    }
+
+    &__bottom{
+        margin-top: 20px;
+    }
+
+    &__uppercase{
+        text-transform: uppercase;
+    }
+
+    &__AddDriver{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        grid-gap: 10px;
+
+        .osago__add_driver{
+            margin-top: 0;
+        }
+    }
+}
+
+.osago__passport::-webkit-scrollbar {
+    width: 5px;
+    height: 4px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.osago__passport::-webkit-scrollbar-track {
+    background: $text;
+}
+
+.osago__passport::-webkit-scrollbar-thumb {
+    background: $fon;
+    height: 4px;
+    border-radius: 50px;
 }
 
 .input-wrap {
