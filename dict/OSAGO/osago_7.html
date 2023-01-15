@@ -335,7 +335,7 @@
 
     <!-- osago start -->
 
-     <div class="osago" id="osago">
+     <div class="osago">
         <section class="container">
             <div class="osago__cart">
                 <div class="osago__logo">
@@ -482,7 +482,7 @@
 
                 <form action="osago_8.html">
                     <label class="input-wrap">
-                        <input type="checkbox" v-model="Iagree">
+                        <input type="checkbox" class="checkboxNone">
                         <span class="checkmark"></span>
                         <h4 class="osago__table__title__h4">
                             Я согласен с условиями публичной <a href="#!">оферты</a> страхования
@@ -495,7 +495,7 @@
                         </p>
                     </div>
 
-                    <button class="osago__list__button" :disabled="!Iagree" type="submit">
+                    <button class="osago__list__button buttonDisabled" type="submit">
                         Далее к оплате <span><i class="fas fa-long-arrow-alt-right"></i></span>
                     </button>
                 </form>
@@ -702,8 +702,6 @@
 
 <script src="../js/jquery-3.6.1.min.js"></script>
 <script src="../js/materialize.min.js"></script>
-<script src="../js/vue3.js"></script>
-<script src="../js/sweetalert2.js"></script>
 <script src="../js/osago.js"></script>
 <script src="../js/slick.min.js"></script>
 <script src="../js/owl.carousel.js"></script>

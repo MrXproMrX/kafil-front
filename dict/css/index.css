@@ -2759,6 +2759,9 @@ label {
   line-height: 135%;
   padding-top: 5px;
 }
+.osago__passport__title__none {
+  display: none;
+}
 .osago__list__cart__checkbox {
   margin-bottom: 20px;
 }

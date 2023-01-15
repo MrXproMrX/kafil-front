@@ -605,6 +605,10 @@
             line-height: 135%;
             padding-top: 5px;
         }
+
+        &__title__none{
+            display: none;
+        }
     }
 
     &__list__cart__checkbox{
