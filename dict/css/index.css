@@ -1813,7 +1813,139 @@ label {
   color: #D6292D;
   border: 2px solid #D6292D;
 }
+.check_policy__error {
+  position: fixed;
+  background-color: rgba(10, 10, 10, 0.6039215686);
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.check_policy__error__cart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #D6292D;
+  width: 95%;
+  max-width: 350px;
+  padding: 30px 20px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.check_policy__error__botton {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  line-height: 100%;
+  text-align: center;
+}
+.check_policy__error__title__h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 135%;
+}
+.check_policy .active {
+  display: block;
+}
 
+.check_policy_in {
+  position: relative;
+  margin-bottom: 65px;
+}
+.check_policy_in__list {
+  max-width: 650px;
+  background-color: #D6292D;
+  height: auto;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 20px 20px 30px 20px;
+  margin: 0 auto;
+}
+.check_policy_in__list .check_policy_in__cart__item + .check_policy_in__cart__item {
+  margin-top: 10px;
+}
+.check_policy_in__icons .checkmark {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #4bb71b;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #4bb71b;
+  animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+  position: relative;
+  top: 5px;
+  right: 5px;
+  margin: 0 auto;
+}
+.check_policy_in__icons .checkmark__circle {
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #4bb71b;
+  fill: #fff;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+.check_policy_in__item {
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+  justify-content: center;
+  flex-direction: column;
+}
+.check_policy_in__title__h2 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 135%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.check_policy_in__title__h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 135%;
+}
+.check_policy_in__title__h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  line-height: 135%;
+  width: 100%;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border: 1px solid white;
+  border-radius: 7px;
+}
+
+@media (max-width: 900px) {
+  .check_policy_in__title__h2 {
+    font-size: 1.875rem;
+  }
+}
 @media (max-width: 550px) {
   .check_policy__form {
     grid-template-columns: auto;
@@ -2780,6 +2912,40 @@ label {
 }
 .osago__AddDriver .osago__add_driver {
   margin-top: 0;
+}
+.osago__modals {
+  display: none;
+  position: fixed;
+  outline: none;
+  left: 0;
+  right: 0;
+  max-height: 70%;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  margin: auto;
+  overflow-y: auto;
+  border-radius: 2px;
+  will-change: top, opacity;
+  max-width: 660px;
+  background-color: #FFFFFF;
+}
+.osago__modals .active {
+  display: block;
+}
+.osago__modals__cart {
+  display: none;
+}
+.osago__cart__none {
+  display: none;
+}
+.osago__item__modals .osago__border {
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid #EAEAEA;
+}
+.osago__active {
+  display: block;
 }
 
 .osago__passport::-webkit-scrollbar {
@@ -5129,7 +5295,8 @@ body {
 .cabinet_worker__cart,
 .osago__cart,
 .appeals__cart,
-.polls__cart {
+.polls__cart,
+.check_policy_in__cart {
     margin-left: 30px;
     margin-right: 30px;
   }
@@ -5354,7 +5521,8 @@ body {
 .cabinet_worker__menu,
 .osago,
 .appeals,
-.polls {
+.polls,
+.check_policy_in {
     margin-bottom: 35px;
   }
   .contacts__list {

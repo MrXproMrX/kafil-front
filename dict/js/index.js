@@ -269,20 +269,37 @@ $(function(){
 
 const welcom = document.querySelector('.technical_work');
 
-setTimeout(()=>{
-  addStylesTo(welcom)
-},8000)
+if(welcom){
+  setTimeout(()=>{
+    addStylesTo(welcom)
+  },8000)
+  
+  function addStylesTo(node){
+    node.style.display = 'none'
+  }
 
-function addStylesTo(node){
-  node.style.display = 'none'
+  $(document).ready(function(){
+    $('.technical_work__botton').click(function(){
+      $('.technical_work').fadeTo(500, 1)
+      $('.technical_work').css('display','none');
+    })
+  });
 }
 
-$(document).ready(function(){
-  $('.technical_work__botton').click(function(){
-    $('.technical_work').fadeTo(500, 1)
-    $('.technical_work').css('display','none');
-  })
-});
 
+// -------------------------------===========---------------------------------
 
-// -------------------------------===========-------------------------------
+const checkPolicyError = document.querySelector('.check_policy__error');
+const checkPolicyBotton = document.querySelector('.check_policy__error__botton');
+
+if(checkPolicyError){
+  checkPolicyError.onclick = () =>{
+    setTimeout(()=>{
+      checkPolicyError.className = 'check_policy__error'
+    },8000)
+  }
+  
+  checkPolicyBotton.onclick = () =>{
+    checkPolicyError.className = 'check_policy__error'
+  }
+}

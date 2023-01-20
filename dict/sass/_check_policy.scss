@@ -84,9 +84,153 @@
             border: 2px solid $fon;
         }
     }
+
+    &__error{
+        position: fixed;
+        background-color:#0a0a0a9a;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    &__error__cart{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color:$fon;
+        width: 95%;
+        max-width: 350px;
+        padding: 30px 20px;
+        border-radius:6px;
+        -webkit-border-radius:6px;
+        -moz-border-radius:6px;
+        -ms-border-radius:6px;
+        -o-border-radius:6px;
+        
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+    }
+
+    &__error__botton{
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        @include fontAll(1.5rem,400,$max);
+        background-color:transparent;
+        width: 20px;
+        height: 20px;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    &__error__title__h2{
+        @include fontAll(1.25rem,500,$max);
+        line-height: 135%;
+    }
+
+    .active {
+        display: block;
+    }
 }
 
 // check_policy end
+
+// check_policy_in start
+
+.check_policy_in{
+    position: relative;
+    margin-bottom: 65px;
+
+    &__list{
+        max-width: 650px;
+        background-color:$fon;
+        height: auto;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        padding: 20px 20px 30px 20px;
+        margin: 0 auto;
+
+        .check_policy_in__cart__item+.check_policy_in__cart__item{
+            margin-top: 10px;
+        }
+    }
+
+    &__icons{
+
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 2;
+            stroke: #4bb71b;
+            stroke-miterlimit: 10;
+            box-shadow: inset 0px 0px 0px #4bb71b;
+            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+            position: relative;
+            top: 5px;
+            right: 5px;
+            margin: 0 auto;
+        }
+
+        .checkmark__circle {
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            stroke: #4bb71b;
+            fill: #fff;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+    }
+
+    &__item{
+        display: flex;
+        align-items:center;
+        grid-gap: 10px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__title__h2{
+        @include fontAll(2.25rem,500,$max);
+        line-height: 135%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__title__h4{
+        @include fontAll(1rem,700,$max);
+        line-height: 135%;
+    }
+
+    &__title__h3{
+        @include fontAll(1rem,400,$max);
+        text-transform: uppercase;
+        line-height: 135%;
+        width: 100%;
+        padding: 5px 10px;
+        margin-top: 10px;
+        border: 1px solid white;
+        border-radius: 7px;
+    }
+}
+
+// check_policy_in end
+
+@media (max-width:900px){
+    .check_policy_in__title__h2{
+        font-size: 1.875rem;
+    }
+}
 
 @media (max-width:550px){
     .check_policy__form{

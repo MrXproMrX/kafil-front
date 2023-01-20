@@ -634,6 +634,48 @@
             margin-top: 0;
         }
     }
+
+    &__modals{
+        display: none;
+        position: fixed;
+        outline: none;
+        left: 0;
+        right: 0;
+        max-height: 70%;
+        width: 100%;
+        max-width: 800px;
+        padding: 20px;
+        margin: auto;
+        overflow-y: auto;
+        border-radius: 2px;
+        will-change: top, opacity;
+        max-width: 660px;
+        background-color:$max;
+
+        .active{
+            display: block;
+        }
+    }
+
+    &__modals__cart{
+        display: none;
+    }
+
+    &__cart__none{
+        display: none;
+    }
+
+    &__item__modals{
+        .osago__border{
+            padding-top: 15px;
+            margin-top: 15px;
+            border-top: 1px solid #EAEAEA;
+        }
+    }
+
+    &__active{
+        display: block;
+    }
 }
 
 .osago__passport::-webkit-scrollbar {

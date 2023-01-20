@@ -1,3 +1,4 @@
+const osago = document.querySelector('.osago__cart__osago6')
 const republic =  document.querySelector('#republic')
 const osagoResident = document.querySelector('#osagoResident')
 const nonResident = document.querySelector('.nonResident')
@@ -5,24 +6,16 @@ const republicOff = document.querySelector('.republic')
 const nonResidentButton = document.querySelector('.nonResidentButton')
 const nonResidentText = document.querySelector('.nonResidentText')
 const individuals = document.querySelector('.individuals')
-const osagoChick = document.querySelector('#osagoChick')
 const osagoChekNone = document.querySelector('.osagoChekNone')
 const osagoChekbutton = document.querySelector('.osagoChekbutton')
-const osagoChekbuttonNone = document.querySelector('.osagoChekbuttonNone')
-const osagoModelMax = document.querySelector('.osagoModelMax')
-const osagoAdd = document.querySelector('.osagoAdd')
-const osagoAddItem = document.querySelector('.osagoAddItem')
-const osagoAddDileti = document.querySelector('.osagoAddDileti')
-nonResident.style.display = 'none'
-republicOff.style.display = 'block'
-nonResidentButton.style.display = 'block'
-nonResidentText.style.display = 'block'
-individuals.style.display = 'none'
-osagoChekNone.style.display = 'none'
-osagoModelMax.style.display = 'none'
-osagoChekbutton.style.display = 'none'
-osagoAddItem.style.display = 'none'
 
+if(osago){
+    nonResident.style.display = 'none'
+    republicOff.style.display = 'block'
+    nonResidentButton.style.display = 'block'
+    nonResidentText.style.display = 'block'
+    individuals.style.display = 'none'
+}
 
 if(republic){
     const republicinput = republic.querySelectorAll('input')
@@ -76,26 +69,6 @@ if(osagoResident){
     }
 }
 
-osagoChick.onclick = () => {
-    if(osagoChick.checked == true){
-        osagoChekNone.style.display = 'block'
-        osagoChekbuttonNone.style.display = 'none'
-        osagoChekbutton.style.display = 'block'
-    }else if (osagoChick.checked == false){
-        osagoChekNone.style.display = 'none'
-        osagoChekbuttonNone.style.display = 'flex'
-        osagoChekbutton.style.display = 'none'
-    }
-}
-
-osagoAdd.onclick = () => {
-    osagoAddItem.style.display = 'block'
-}
-
-osagoAddDileti.onclick = () => {
-    osagoAddItem.style.display = 'none'
-}
-
 if(osagoChekNone){
     const osagoChekNoneinputLabael = document.querySelectorAll('.osagoChekNone label input')
     const osagoChekNoneNotFunt = document.querySelectorAll('.osagoChekNone label h4')
@@ -103,17 +76,43 @@ if(osagoChekNone){
         for(let i = 0; i < osagoChekNoneinputLabael.length;i++){
             if(osagoChekNoneinputLabael[0].value.length >= osagoChekNoneinputLabael[0].maxLength && osagoChekNoneinputLabael[1].value.length >= osagoChekNoneinputLabael[1].maxLength && osagoChekNoneinputLabael[2].value.length >= osagoChekNoneinputLabael[2].maxLength){
                 osagoChekNoneNotFunt[i].className = 'osago__passport__title__none'
-                osagoChekbuttonNone.style.display = 'flex'
-                osagoModelMax.style.display = 'block'
                 osagoChekbutton.style.display = 'none'
             }else if(osagoChekNoneinputLabael[i].value.length >= 0){
                 osagoChekNoneNotFunt[i].className = 'osago__passport__title__h4'
-                osagoModelMax.style.display = 'none'
-                osagoChekbuttonNone.style.display = 'none'
                 osagoChekbutton.style.display = 'block'
             }else{
                 console.log('Not funt')
             }
         }
+    }
+}
+
+// --------------
+
+const modalsInput = document.querySelector(".modalsInput");
+const modalsButton = document.querySelector(".modalsButton");
+const modaLcountry = document.querySelector('.modaLcountry');
+const osagoModalsCart = document.querySelector('.osago__modals__cart');
+const checkboxNone = document.querySelector('.checkboxNone');
+const buttonDisabled = document.querySelector('.buttonDisabled');
+
+if(modalsInput){
+    const modalsInputClich = modalsInput.querySelectorAll('input')
+
+    modalsButton.onclick = () => {
+        osagoModalsCart.className = 'osago__modals__cart'
+        for(let i = 0; i <  modalsInputClich.length;i++){
+            modalsInputClich[i].value = ""
+            modaLcountry.value = modaLcountry[0].value
+        }
+    }
+}
+
+if(checkboxNone){
+    buttonDisabled.disabled = !checkboxNone.checked
+    checkboxNone.onclick = () => {
+      if(checkboxNone.checked == true){
+        buttonDisabled.disabled = !checkboxNone.checked
+      }
     }
 }

@@ -321,7 +321,7 @@
                     </li>
 
                     <li>
-                        <a href="check_policy.html" class="about__menu__link">Проверить полис</a>
+                        <a href="checkPolicyIn.html" class="about__menu__link">Проверить полис</a>
                     </li>
                 </ul>
                 
@@ -333,61 +333,59 @@
     <!-- about end -->
 
 
-    <!-- Check policy start -->
+    <!-- check_policy_in start-->
 
-    <div class="check_policy">
+    <div class="check_policy_in">
         <section class="container">
-            <div class="check_policy__cart">
-                <h2 class="online_services__title__h2">Проверить полис</h2>
+            <div class="check_policy_in__cart">
+                <div class="check_policy_in__list">
+                    <div class="check_policy_in__item">
+                        <div class="check_policy_in__icons">
+                            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"></circle><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+                        </div>
+                        <h2 class="check_policy_in__title__h2">Проверено</h2>
+                    </div>
 
-                <form action="checkPolicyIn.html">
-                    <section class="check_policy__form">
-                        <label>
-                            <h4 class="check_policy__title__h4">Выведите</h4>
-                            <select name="seria" id="select" class="check_policy__select">
-                                <option selected>EGIL</option>
-                                <option value="АКС">АКС</option>
-                                <option value="БАФЖ">БАФЖ</option>
-                                <option value="ЖБХ">ЖБХ</option>
-                                <option value="УНИ">УНИ</option>
-                                <option value="АГУС">АГУС</option>
-                                <option value="KLL">KLL</option>
-                                <option value="KLU"> KLU</option>
-                                <option value="Автоҳимоя">Автоҳимоя</option>
-                                <option value="TREVEL">TREVEL</option>
-                                <option value="KLT">KLT</option>
-                                <option value="KLI">KLI</option>
-                                <option value="EKLU">EKLU</option>
-                                <option value="EKLL">EKLL</option>
-                                <option value="EKU">EKU</option>
-                            </select>
-                        </label>
-    
-                        <label>
-                            <h4 class="check_policy__title__h4">Выведите номер страхового полиса:</h4>
-                            <input type="text" class="check_policy__input">
-                        </label>
-                    </section>
+                    <div class="check_policy_in__cart__item">
+                        <h4 class="check_policy_in__title__h4">Серия и номер полиса:</h4>
+                        <h3 class="check_policy_in__title__h3">EKLL 0000185</h3>
+                    </div>
 
-                    <button type="submit" class="check_policy__button">ПРОВЕРИТЬ ПОЛИС</button>
-                </form>
+                    <div class="check_policy_in__cart__item">
+                        <h4 class="check_policy_in__title__h4">Вид полиса:</h4>
+                        <h3 class="check_policy_in__title__h3">ТРАНСПОРТ ВОСИТАЛАРИ ЭГАЛАРИНИНГ ФУҚАРОЛИК ЖАВОБГАРЛИГИНИ МАЖБУРИЙ СУҒУРТА ҚИЛИШ (10/00/00)</h3>
+                    </div>
 
-                <!-- error start -->
+                    <div class="check_policy_in__cart__item">
+                        <h4 class="check_policy_in__title__h4">Клиент:</h4>
+                        <h3 class="check_policy_in__title__h3">RASHIDOVA YULDUZOY FAXRUDDIN QIZI</h3>
+                    </div>
 
-                <div class="check_policy__error"> <!--active-->
-                    <div class="check_policy__error__cart">
-                        <button class="check_policy__error__botton"><i class="fas fa-times"></i></button>
-                        <h2 class="check_policy__error__title__h2">Введенные данные отсутствуют в базе данных!</h2>
+                    <div class="check_policy_in__cart__item">
+                        <h4 class="check_policy_in__title__h4">Дата начало полиса:</h4>
+                        <h3 class="check_policy_in__title__h3">2022-03-30T00:00:00</h3>
+                    </div>
+
+                    <div class="check_policy_in__cart__item">
+                        <h4 class="check_policy_in__title__h4">Дата окончание полиса:</h4>
+                        <h3 class="check_policy_in__title__h3">2023-03-29T00:00:00</h3>
+                    </div>
+
+                    <div class="check_policy_in__cart__item">
+                        <h4 class="check_policy_in__title__h4">Страховая премия:</h4>
+                        <h3 class="check_policy_in__title__h3">56000UZS</h3>
+                    </div>
+
+                    <div class="check_policy_in__cart__item">
+                        <h4 class="check_policy_in__title__h4">Состояния договора:</h4>
+                        <h3 class="check_policy_in__title__h3">Подписан</h3>
                     </div>
                 </div>
-
-                <!-- error end -->
-
             </div>
         </section>
     </div>
 
-    <!-- Check policy end -->
+    <!-- check_policy_in end-->
 
 
     <!-- Feedback start -->
@@ -582,7 +580,7 @@
 </div>
 
 <!-- ---------------------------------------- -->
-
+   
 
 <script src="js/jquery-3.6.1.min.js"></script>
 <script src="js/materialize.min.js"></script>

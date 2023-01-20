@@ -815,7 +815,7 @@
 
                        <section class="individuals">
 
-                            <form action="#!" class="osago__model" @submit.prevent="individualsAdd">
+                            <form action="#!" class="osago__model">
                                 <h3 class="osago__title2__h3">Государственный номер транспортного средства</h3>
     
                                 <h3 class="osago__title__h3">Модель транспортного средства</h3>
@@ -833,45 +833,20 @@
                                 <h3 class="osago__title__h3">Владелец автомобиля</h3>
                                 <h4 class="osago__title2__h4"><span>Max Mrx</span></h4>
 
-                                <h3 class="osago__title__h3">ПИНФЛ владельца ТС</h3>
-                                <h4 class="osago__title2__h4"><span>32005640260048</span></h4>
-
-                                <div class="osago__list__osago2">
-                                    <section>
-                                        <h3 class="osago__title__h3">Серия паспорта / ID</h3>
-                                        <h4 class="osago__title2__h4"><span>AA</span></h4>
-                                    </section>
-    
-                                    <section>
-                                        <h3 class="osago__title__h3">Номер паспорта / ID</h3>
-                                        <h4 class="osago__title2__h4"><span>5061419</span></h4>
-                                    </section>
-                                </div>
-
                                 <label>
                                     <h3 class="osago__title__h3">Номер телефона</h3>
                                     <input type="tel" name="phone" value="+998" class="osago__input__osago2">
                                 </label>
 
-                                <section class="osago__list__cart__checkbox">
-                                    <label class="input-wrap">
-                                        <input type="checkbox" id="osagoChick">
-                                        <span class="checkmark"></span>
-                                        <h4 class="osago__table__title__h4">
-                                            Владелец является заявителем
-                                        </h4>
-                                    </label>
-                                </section>
-
                                 <section class="osago__list__item">
                                     <h3 class="osago__title__h3" data-title="Выберите пункт">Выберите количество водителей - ?</h3> 
         
-                                    <input checked type="radio"  v-model="AddDriverCheck" value="maxOff"  name="drivers" id="drivers_1">
+                                    <input checked type="radio"  name="drivers" id="drivers_1">
                                     <label for="drivers_1">
                                         <h4 class="osago__title__h4">Число водителей ограничено</h4>
                                     </label>
         
-                                    <input type="radio" v-model="AddDriverCheck" value="maxOn" name="drivers" id="drivers_2">
+                                    <input type="radio" value="maxOn" name="drivers" id="drivers_2">
                                     <label for="drivers_2">
                                         <h4 class="osago__title__h4">Число водителей не ограничено</h4>
                                     </label>
@@ -917,7 +892,7 @@
                                     </section>
                                 </section>
 
-                                <section class="osago__cart__osago3 osagoChekNone">
+                                <section class="osago__cart__osago3">
     
                                     <section class="osago__item__osago3">
                                         <label>
@@ -955,12 +930,14 @@
                                             </h4>
                                         </label>
                                     </section>
+
+                                    <button type="submit" class="osago__list__button osagoChekbutton">
+                                        Далее <span><i class="fas fa-long-arrow-alt-right"></i></span>
+                                    </button>
             
                                 </section>
                                 
-
-                                
-                                <section class="osago__model osagoModelMax">
+                                <section class="osago__model osago__cart__none osago__active">
                                     <div class="osago__list__osago3">
         
                                         <section>
@@ -988,88 +965,155 @@
                                         </section>
     
                                     </div>
-    
-                                    <div class="osago__text__osago2">
-                                        <p>Для продолжения оформления нажмите кнопку « Далее »</p>
-                                    </div>
                                 </section>
 
-                                <!-- osago add item start -->
+                                <section>
 
-                                <section class="osago__cart__osago3 osagoAddItem">
-    
-                                    <div class="osago__AddDriver">
-                                        <h3 class="osago__title2__h3">Водитель № 1</h3>
-                                        
-                                        <div class="osago__add_driver">
-                                            <button type="button" class="osago__delete_driver__link osagoAddDileti">
-                                                Удалить водителя
-                                            </button>
+                                    <!-- osago add item start -->
+                                    
+                                    <section class="osago__item__modals">
+                                        <section class="osago__cart__osago3 osago__border">
+                                            
+                                            <div class="osago__AddDriver">
+                                                <h3 class="osago__title2__h3">Водитель № 1</h3>
+                                                
+                                                <div class="osago__add_driver">
+                                                <button type="button" class="osago__delete_driver__link osagoAddDileti">
+                                                    Удалить водителя
+                                                </button>
+                                            </div>
                                         </div>
-                                    </div>
-                        
-                                    <section class="osago__item__osago3">
-                                        <label>
-                                            <h3 class="osago__title__h3" data-title="Серия паспорта водителя">Серия паспорта / ID Водителя № 1</h3>
-                                            <input type="text" placeholder="AA" class="osago__input__osago2">
-                                        </label>
-                                    </section>
-                        
-                                    <section class="osago__item__osago3">
-                                        <label>
-                                            <h3 class="osago__title__h3" data-title="Номер паспорта водителя">Номер паспорта / ID Водителя № 1</h3>
-                                            <input type="number" placeholder="5061419" class="osago__input__osago2">
-                                        </label>
-                                    </section>
-                        
-                                    <section class="osago__item__osago3">
-                                        <label>
-                                            <h3 class="osago__title__h3" data-title="Дата рождения водителя">Дата рождения Водителя № 1</h3>
-                                            <input type="date" placeholder="35.78.1908" class="osago__input__osago2">
-                                        </label>
-                                    </section>
+                            
+                                        <h3 class="osago__title__h3">Фамилия и Имя</h3>
+                                        <h4 class="osago__title2__h4"><span>Max Mrx</span></h4>
+                                        
+                                        </section>
+    
+                                        <section class="osago__cart__osago3 osago__border">
+                                        
+                                            <div class="osago__AddDriver">
+                                                <h3 class="osago__title2__h3">Водитель № 2</h3>
+                                                
+                                                <div class="osago__add_driver">
+                                                    <button type="button" class="osago__delete_driver__link osagoAddDileti">
+                                                        Удалить водителя
+                                                    </button>
+                                                </div>
+                                            </div>
+                                
+                                            <h3 class="osago__title__h3">Фамилия и Имя</h3>
+                                            <h4 class="osago__title2__h4"><span>Max Mrx</span></h4>
+                                
+                                        </section>
+                                    
+                                        <section class="osago__cart__osago3 osago__border">
+        
+                                            <div class="osago__AddDriver">
+                                                <h3 class="osago__title2__h3">Водитель № 3</h3>
+                                                
+                                                <div class="osago__add_driver">
+                                                    <button type="button" class="osago__delete_driver__link osagoAddDileti">
+                                                        Удалить водителя
+                                                    </button>
+                                                </div>
+                                            </div>
+                                
+                                            <h3 class="osago__title__h3">Фамилия и Имя</h3>
+                                            <h4 class="osago__title2__h4"><span>Max Mrx</span></h4>
+                                
+                                        </section>
+                                     </section>
 
-                                    <section class="osago__list__item">
-                                        <h3 class="osago__title__h3" data-title="Выберите степень родства водителя">Выберите степень родства Водителя № 1</h3> 
-            
-                                        <select class="osago__list__select" name="country" id="country">
-                                            <span></span>
-                                            <option selected v-if="AddDriverCheck == 'maxOn'">Не родственник</option>
-                                            <option value="1">Отец</option>
-                                            <option value="2">Старший брат</option>
-                                            <option value="3">Младший брат</option>
-                                            <option value="4">Жена</option>
-                                            <option value="5">Мать</option>
-                                            <option value="6">Муж</option>
-                                            <option value="7">Сын</option>
-                                            <option value="8">Дочь</option>
-                                            <option value="9">Старшая сестра</option>
-                                            <option value="10">Младшая сестра</option>
-                                        </select>
-                                    </section>
-                        
+                                     <!-- osago add item end -->
+                                
+                                    <div class="osago__add_driver">
+                                        <button type="button" data-target="modal4" class="osago__add_driver__link modal-trigger"> 
+                                            Добавить водителя <span><i class="fas fa-plus"></i></span>
+                                        </button>
+                                    </div>
+
                                 </section>
 
-                                <!-- osago add item end -->
-
-                                <div class="osago__add_driver">
-                                    <button type="button" class="osago__add_driver__link osagoAdd"> 
-                                        Добавить водителя <span><i class="fas fa-plus"></i></span>
-                                    </button>
-                                </div>
-
-                                <button type="submit" class="osago__list__button osagoChekbutton">
+                                <button type="submit" class="osago__list__button">
                                     Далее <span><i class="fas fa-long-arrow-alt-right"></i></span>
                                 </button>
-
-                                <div class="osago__add_driver osagoChekbuttonNone">
-                                    <a href="../OSAGO/osago_7.html" class="osago__delete_driver__link">
-                                        Отправить <span><i class="fas fa-long-arrow-alt-right"></i></span>
-                                    </a>
-                                </div>
                                 
                             </form>
 
+                       </section>
+
+                       <section class="osago__modals modal modalsInput" id="modal4">
+                        <section class="osago__cart__osago3">
+
+                            <section class="osago__item__osago3">
+                                <label>
+                                    <h3 class="osago__title__h3">Серия паспорта</h3>
+                                    <input type="text" placeholder="AA" class="osago__input__osago2">
+                                </label>
+                            </section>
+
+                            <section class="osago__item__osago3">
+                                <label>
+                                    <h3 class="osago__title__h3">Номер паспорта</h3>
+                                    <input type="number" placeholder="5061419" class="osago__input__osago2">
+                                </label>
+                            </section>
+
+                            <section class="osago__item__osago3">
+                                <label>
+                                    <h3 class="osago__title__h3">Дата рождения</h3>
+                                    <input type="date" placeholder="35.78.1908" class="osago__input__osago2">
+                                </label>
+                            </section>
+
+                            <button type="submit" class="osago__list__button">
+                                Далее <span><i class="fas fa-long-arrow-alt-right"></i></span>
+                            </button>
+
+                        </section>
+
+                        <section class="osago__modals__cart active">
+                            
+                                <h3 class="osago__title__h3">Фамилия и Имя</h3>
+                                <h4 class="osago__title2__h4"><span>Max Mrx</span></h4>
+                            
+                                <section>
+                                    <h3 class="osago__title__h3">Серия и вид удостоврения</h3>
+                                    <div class="osago__list__osago2">
+                                        <section>
+                                            <input type="text" placeholder="AA" class="osago__input__osago2">
+                                        </section>
+                                        
+                                        <section>
+                                            <input type="number" placeholder="5061419" class="osago__input__osago2">
+                                        </section>
+                                    </div>
+                                </section>
+                            
+                                <section class="osago__list__item">
+                                    <h3 class="osago__title__h3">Степень родства</h3> 
+                                    
+                                    <select class="osago__list__select modaLcountry" name="country" id="country">
+                                        <span></span>
+                                        <option selected>Не родственник</option>
+                                        <option value="1">Отец</option>
+                                        <option value="2">Старший брат</option>
+                                        <option value="3">Младший брат</option>
+                                        <option value="4">Жена</option>
+                                        <option value="5">Мать</option>
+                                        <option value="6">Муж</option>
+                                        <option value="7">Сын</option>
+                                        <option value="8">Дочь</option>
+                                        <option value="9">Старшая сестра</option>
+                                        <option value="10">Младшая сестра</option>
+                                    </select>
+                                </section> 
+
+                                <button type="submit" class="osago__list__button  modal-close  modalsButton">
+                                    Отправить
+                                </button>
+                            
+                        </section>
                        </section>
 
                         <!-- INDIVIDUALS end -->
