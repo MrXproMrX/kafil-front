@@ -1,8 +1,26 @@
 // osago start
 
+.open{
+    overflow: auto !important;
+}
+
 .osago{
     position: relative;
     margin-bottom: 65px;
+
+    label{
+        width: 100%;
+    }
+
+    .gj-datepicker-md [role=right-icon]{
+        top: 50%;
+        right: 30px;
+        transform: translate(0,-50%);
+        -webkit-transform: translate(0,-50%);
+        -moz-transform: translate(0,-50%);
+        -ms-transform: translate(0,-50%);
+        -o-transform: translate(0,-50%);
+    }
 
     .online_services__title__h2{
         text-align: left;
@@ -262,7 +280,7 @@
         line-height: 130%;
 
         &::placeholder{
-            @include fontAll(1.125rem,400,$link);
+            @include fontAll(1.125rem,400,#b7b1b1);
             line-height: 130%;
         }
     }
@@ -934,6 +952,12 @@
     .osago__list__logo{
         grid-template-columns: 1fr 1fr;
     }
+
+    .osago__modals {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: auto;
+    }
 }
 
 @media (max-width:650px){
@@ -971,6 +995,14 @@
 
     .osago__cart__som{
         grid-template-columns: 1fr;
+    }
+
+    .osago__modals {
+        .osago__list__osago2{
+            section + section{
+                margin-top: 20px;
+            }
+        }
     }
 }
 

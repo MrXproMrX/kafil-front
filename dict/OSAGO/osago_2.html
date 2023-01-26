@@ -14,12 +14,14 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css">
+
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/custom1.css">
     <link rel="stylesheet" href="../css/fancybox-main.css">
     <link rel="stylesheet" href="../css/owl.carousel.css">
     <link rel="stylesheet" href="../css/slick.css">
+
 
     <title>ОСГОВТС</title>
 </head>
@@ -129,26 +131,27 @@
                 </div>
 
                 <section class="header__ru__menu">
+                    
                 <!-- language start -->
     
                 <div class="header__ru">
                                 
-                    <div class="header__ru_cart dropdown-trigger"data-target='dropdown1'>
-                        <a data-target='dropdown1' class="header__en__link">RU</a>
+                    <div class="header__ru_cart">
+                        <a class="header__en__link">RU</a>
                         <span><i class="fas fa-angle-down"></i></span>
-                    </div>
-                    
-                    <div class="header__ru_none dropdown-content" id='dropdown1'>
-                        <div class="header__ru_list active">
-                            <a href="#!-1" class="header__en__link">RU</a>
-                        </div>
-                        
-                        <div class="header__ru_list">
-                            <a href="#!-2" class="header__en__link">EN</a>
-                        </div>
-                        
-                        <div class="header__ru_list">
-                            <a href="#!-3" class="header__en__link">UZ</a>
+
+                        <div class="header__ru_none">
+                            <div class="header__ru_list active">
+                                <a href="#!-1" class="header__en__link">RU</a>
+                            </div>
+                            
+                            <div class="header__ru_list">
+                                <a href="#!-2" class="header__en__link">EN</a>
+                            </div>
+                            
+                            <div class="header__ru_list">
+                                <a href="#!-3" class="header__en__link">UZ</a>
+                            </div>
                         </div>
                     </div>
                     
@@ -838,6 +841,16 @@
                                     <input type="tel" name="phone" value="+998" class="osago__input__osago2">
                                 </label>
 
+                                <section class="osago__list__cart__checkbox">
+                                    <label class="input-wrap">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        <h4 class="osago__table__title__h4">
+                                            Владелец является заявителем
+                                        </h4>
+                                    </label>
+                                </section>          
+
                                 <section class="osago__list__item">
                                     <h3 class="osago__title__h3" data-title="Выберите пункт">Выберите количество водителей - ?</h3> 
         
@@ -888,7 +901,7 @@
                                     Введите или выберите дату вступления в силу электронного полиса - ?</h3>
         
                                     <section class="osago__cart__item__input">
-                                        <input type="date" placeholder="35.78.1908" class="osago__input__osago2">
+                                        <input type="text" placeholder="дд.мм.гггг" class="osago__input__osago2 datepicker">
                                     </section>
                                 </section>
 
@@ -896,8 +909,8 @@
     
                                     <section class="osago__item__osago3">
                                         <label>
-                                            <h3 class="osago__title__h3" data-title="Введите серию паспорта / ID собственника транспортного средства">
-                                                Серия паспорта / ID собственника транспортного средства
+                                            <h3 class="osago__title__h3" data-title="Введите серию паспорта">
+                                                Серия паспорта
                                             </h3>
                                             <input type="text" maxlength="2" placeholder="AA" class="osago__input__osago2 osago__uppercase">
                                             <h4 class="osago__passport__title__none" >
@@ -908,8 +921,8 @@
         
                                     <section class="osago__item__osago3">
                                         <label>
-                                            <h3 class="osago__title__h3" data-title="Введите номер паспорта / ID собственника транспортного средства">
-                                                Номер паспорта / ID собственника транспортного средства
+                                            <h3 class="osago__title__h3" data-title="Введите номер паспорта">
+                                                Номер паспорта
                                             </h3>
                                             <input maxlength="7" type="text" placeholder="5061419" class="osago__input__osago2">
                                             <h4 class="osago__passport__title__none">
@@ -920,9 +933,8 @@
         
                                     <section class="osago__item__osago3">
                                         <label>
-                                            <h3 class="osago__title__h3" data-title="Введите или выберите дату рождения собственника транспортного средства">
+                                            <h3 class="osago__title__h3" data-title="Введите или выберите дату рождения">
                                                 Введите или выберите дату рождения
-                                                собственника транспортного средства
                                             </h3>
                                             <input maxlength="10" type="date" placeholder="20.03.2003" class="osago__input__osago2">
                                             <h4 class="osago__passport__title__none">
@@ -1355,9 +1367,9 @@
 </div>
 
 <!-- ---------------------------------------- -->
-   
 
 <script src="../js/jquery-3.6.1.min.js"></script>
+<script src="../js/dataInput.js"></script>
 <script src="../js/materialize.min.js"></script>
 <script src="../js/osago.js"></script>
 <script src="../js/slick.min.js"></script>
@@ -1370,6 +1382,7 @@
 <script src="../js/animation.js"></script>
 <script src="../js/index.js"></script>
 <script src="../js/map.js"></script>
+<script src="../js/unpkg.js"></script>
 
 <script>
     $(".chart .statistics div:nth-of-type(1)").animate({height: "10%"}, 2000);

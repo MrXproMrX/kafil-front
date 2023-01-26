@@ -1,12 +1,4 @@
 $(document).ready(function(){
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.dropdown-trigger');
-        var instances = M.Dropdown.init(elems, options);
-    });
-      
-      // Or with jQuery
-      
-    $('.dropdown-trigger').dropdown();
 
 // -------------------------------===========-------------------------------
 
@@ -303,3 +295,28 @@ if(checkPolicyError){
     checkPolicyError.className = 'check_policy__error'
   }
 }
+
+
+const managementItemCart = document.querySelectorAll('.management__item__cart a, .management__none__dropdown');
+const managementFixed = document.querySelectorAll('.management__fixed');
+
+managementItemCart.forEach(function(button, index) {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    this.parentNode.classList.toggle('active');
+    
+    managementItemCart.forEach(function(button2, index2) {
+      if ( index !== index2 ) {
+        button2.parentNode.classList.remove('active');
+      }
+    });
+  });
+});
+
+managementFixed.forEach(function(button) {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    this.parentNode.classList.remove('active');
+  });
+});

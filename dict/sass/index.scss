@@ -359,13 +359,13 @@ body{
     &__ru_none{
         position: absolute;
         z-index: 10;
-        margin-top: 15px;
         top: 100% !important;
         left: 30px !important;
         width: 60px !important;
         height: auto !important;
         text-align: center;
         overflow: hidden;
+        display: none;
         .header__en__link{
             color:$title;
             font-weight: 400;
@@ -412,6 +412,16 @@ body{
             bottom: -25px;
             left: 0;
             z-index: -1;
+        }
+
+        &:hover{
+            .header__ru_none{
+                display: block;
+            }
+        }
+
+        &:focus-within > .header__ru_none{
+            display: block; 
         }
     }
 

@@ -9,6 +9,35 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 30px 20px;
         align-items:start;
+
+        .active{
+            .management__cart__dropdown{
+                display: block;
+            }
+
+            .management__fixed{
+                display: block;
+            }
+        }
+    }
+
+    &__cart__dropdown{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 10000;
+        display: none;
+        height: 95vh;
+        width: 600px;
+        min-height: 300px;
+        padding: 30px 40px;
+        background-color:$max;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+        overflow-y: scroll;
     }
 
     &__img{
@@ -63,6 +92,53 @@
         padding: 25px 10px;
         text-align: center;
     }
+
+    &__fixed{
+        position: fixed;
+        z-index: 999;
+        top: -25%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 125%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        opacity: 1 !important;
+        will-change: opacity;
+    }
+
+    &__none__dropdown{
+        background-color:transparent;
+        @include fontAll(2rem,600,$fon);
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+.management__cart__dropdown::-webkit-scrollbar {
+    width: 5px;
+    height: 4px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.management__cart__dropdown::-webkit-scrollbar-track {
+    background: $max;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.management__cart__dropdown::-webkit-scrollbar-thumb {
+    background: $fon;
+    height: 4px;
 }
 
 // management end
@@ -72,7 +148,6 @@
 
 .management_in{
     position: relative;
-    margin-bottom: 65px;
 
     &__item{
         margin: 0 auto;
@@ -113,6 +188,10 @@
             font-weight: 600;
             font-style: normal;
             display: inline-block;
+        }
+
+        p{
+            margin-bottom: 5px;
         }
         
         p+p{
