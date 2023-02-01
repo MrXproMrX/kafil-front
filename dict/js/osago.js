@@ -93,8 +93,6 @@ const modalsInput = document.querySelector(".modalsInput");
 const modalsButton = document.querySelector(".modalsButton");
 const modaLcountry = document.querySelector('.modaLcountry');
 const osagoModalsCart = document.querySelector('.osago__modals__cart');
-const checkboxNone = document.querySelector('.checkboxNone');
-const buttonDisabled = document.querySelector('.buttonDisabled');
 
 if(modalsInput){
     const modalsInputClich = modalsInput.querySelectorAll('input')
@@ -108,11 +106,30 @@ if(modalsInput){
     }
 }
 
+
+const checkboxNone = document.querySelector('.checkboxNone');
+const buttonDisabled = document.querySelector('.buttonDisabled');
+
 if(checkboxNone){
-    buttonDisabled.disabled = !checkboxNone.checked
-    checkboxNone.onclick = () => {
-      if(checkboxNone.checked == true){
-        buttonDisabled.disabled = !checkboxNone.checked
-      }
+  buttonDisabled.disabled = !checkboxNone.checked
+  if( buttonDisabled.disabled){
+    buttonDisabled.style.backgroundColor = '#d6292dd6'
+    buttonDisabled.style.cursor = 'not-allowed'
+  }
+
+  checkboxNone.onclick = () => {
+
+    if(checkboxNone.checked == true){
+      buttonDisabled.disabled = !checkboxNone.checked
+      buttonDisabled.style.backgroundColor = '#D6292D'
+      buttonDisabled.style.cursor = 'pointer'
     }
+
+    if(checkboxNone.checked == false){
+      buttonDisabled.disabled = !checkboxNone.checked
+      buttonDisabled.style.backgroundColor = '#d6292dd6'
+      buttonDisabled.style.cursor = 'not-allowed'
+    }
+
+  }
 }

@@ -2788,6 +2788,7 @@ label {
 }
 .osago__table__list tr td + td {
   border-left: 1px solid #EAEAEA;
+  text-transform: uppercase;
 }
 .osago__table__list tr + tr td {
   border-top: 1px solid #EAEAEA;
