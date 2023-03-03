@@ -516,16 +516,6 @@ body{
         margin-right: 10px;
     }
 
-    // -----------------------
-
-    &__lift__img{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-
-        @include fiximg(250px,100px,false);
-    }
 }
 
 .modal-overlay,
@@ -1377,7 +1367,7 @@ body{
         display: grid;
         grid-gap: 10px;
         grid-template-columns: 1fr 1fr;
-        align-items:start;
+        align-items:center;
 
         .online_services__title__h2{
             position: relative;
