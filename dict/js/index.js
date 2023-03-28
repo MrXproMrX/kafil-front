@@ -104,14 +104,31 @@ buttons_2.forEach(function(button, index) {
 
 // -------------------------------===========-------------------------------
 
-const buttons_3 = document.querySelectorAll('.menu_none');
-buttons_3.forEach(function(button, index) {
+const buttons_02 = document.querySelectorAll('.menu_none');
+buttons_02.forEach(function(button, index) {
   button.addEventListener('click', function(e) {
     e.preventDefault();
     
     this.parentNode.classList.toggle('active');
     
-    buttons_3.forEach(function(button2, index2) {
+    buttons_02.forEach(function(button02, index2) {
+      if ( index !== index2 ) {
+        button02.parentNode.classList.remove('active');
+      }
+    });
+  });
+});
+
+// -------------------------------===========-------------------------------
+
+const buttons_6 = document.querySelectorAll('.pollsButton');
+buttons_6.forEach(function(button, index) {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    this.parentNode.classList.toggle('active');
+    
+    buttons_6.forEach(function(button2, index2) {
       if ( index !== index2 ) {
         button2.parentNode.classList.remove('active');
       }
