@@ -1,59 +1,48 @@
 $(document).ready(function(){
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems, options);
+      });
+    
+      // Or with jQuery
+    
+      $(document).ready(function(){
+        $('.modal').modal();
+      });
 
-// -------------------------------===========-------------------------------
+      // -------------------------------------------------------------------
 
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.modal');
-  var instances = M.Modal.init(elems, options);
-});
-
-// Or with jQuery
-
-$(document).ready(function(){
-  $('.modal').modal();
-});
-
-// -------------------------------===========-------------------------------
-
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems, options);
-});
-
-// Initialize collapsible (uncomment the lines below if you use the dropdown variation)
-// var collapsibleElem = document.querySelector('.collapsible');
-// var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
-
-// Or with jQuery
-
-$(document).ready(function(){
-  $('.sidenav').sidenav();
-});
-
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, options);
+      });
+    
+      // Or with jQuery
+    
+      $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });
 });
 
 // -------------------------------===========-------------------------------
 
-$(document).ready(function(){
-  (function($){
-    $('.numbers').each(function(){
-        $(this).prop('Counter',0).animate({
-            Counter:$(this).text()
-        },
-        {
-            duration:9000,
-            easing:"swing",
-            step:function(now){
-                $(this).text(Math.ceil(now));
-            }  
-       });
-    })
-  })(jQuery);
-});
+$(function(){
+    let Catalog_max__pro__ul_link = document.querySelectorAll('.header__ru__link');
+  
+    for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
+        Catalog_max__pro__ul_link[i].addEventListener('click',function(){
+            for(let j = 0; j<Catalog_max__pro__ul_link.length;j++){
+                Catalog_max__pro__ul_link[j].classList.remove('active');
+            }
+            this.classList.add('active');
+  
+        })
+    }
+  });
 
 // -------------------------------===========-------------------------------
 
-const buttons = document.querySelectorAll('.header__bottom__link');
+const buttons = document.querySelectorAll('.header__link__cart');
 buttons.forEach(function(button, index) {
   button.addEventListener('click', function(e) {
     e.preventDefault();
@@ -70,65 +59,14 @@ buttons.forEach(function(button, index) {
 
 // -------------------------------===========-------------------------------
 
-const buttons_1 = document.querySelectorAll('.facts__title__h3');
-buttons_1.forEach(function(button, index) {
+const buttons1 = document.querySelectorAll('.history__download__title__h3');
+buttons1.forEach(function(button, index) {
   button.addEventListener('click', function(e) {
     e.preventDefault();
     
     this.parentNode.classList.toggle('active');
     
-    buttons_1.forEach(function(button2, index2) {
-      if ( index !== index2 ) {
-        button2.parentNode.classList.remove('active');
-      }
-    });
-  });
-});
-
-// -------------------------------===========-------------------------------
-
-const buttons_2 = document.querySelectorAll('.Jobs__title__h3');
-buttons_2.forEach(function(button, index) {
-  button.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    this.parentNode.classList.toggle('active');
-    
-    buttons_2.forEach(function(button2, index2) {
-      if ( index !== index2 ) {
-        button2.parentNode.classList.remove('active');
-      }
-    });
-  });
-});
-
-// -------------------------------===========-------------------------------
-
-const buttons_02 = document.querySelectorAll('.menu_none');
-buttons_02.forEach(function(button, index) {
-  button.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    this.parentNode.classList.toggle('active');
-    
-    buttons_02.forEach(function(button02, index2) {
-      if ( index !== index2 ) {
-        button02.parentNode.classList.remove('active');
-      }
-    });
-  });
-});
-
-// -------------------------------===========-------------------------------
-
-const buttons_6 = document.querySelectorAll('.pollsButton');
-buttons_6.forEach(function(button, index) {
-  button.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    this.parentNode.classList.toggle('active');
-    
-    buttons_6.forEach(function(button2, index2) {
+    buttons1.forEach(function(button2, index2) {
       if ( index !== index2 ) {
         button2.parentNode.classList.remove('active');
       }
@@ -139,86 +77,7 @@ buttons_6.forEach(function(button, index) {
 // -------------------------------===========-------------------------------
 
 $(function(){
-  let Catalog_max__pro__link = document.querySelectorAll('.fotogalereya_in__item2');
-
-  for(let i = 0; i<Catalog_max__pro__link.length; i++){
-      Catalog_max__pro__link[i].addEventListener('click',function(){
-          for(let j = 0; j<Catalog_max__pro__link.length;j++){
-              Catalog_max__pro__link[j].classList.remove('active');
-          }
-          this.classList.add('active');
-
-      })
-  }
-});
-
-//-----===========----------------------------------------------------------
-
-var i=0;
-	$(".management__menu__link").each(function(){
-  length
-	i++;
-	$(this).attr("href","#mrx-"+i);
-});
-
-var i=0;
-	$(".management__item").each(function(){
-  length
-	i++;
-	$(this).attr("id","mrx-"+i);
-});
-
-
-// directions_in id end
-$('.management__list .management__item').hide();
-$('.management__list .management__item:first').show();
-$('.management__menu li:first').addClass('active');
-
-// Change tab class and display content
-$('.management__menu a').on('click', function(event){
-  event.preventDefault();
-  $('.management__menu li').removeClass('active');
-  $(this).parent().addClass('active');
-  $('.management__list .management__item').hide();
-  $($(this).attr('href')).show();
-});
-
-
-// -----===========----------------------------------------------------------
-
-//-----===========----------------------------------------------------------
-
-var i=0;
-	$(".cabinet_worker__menu li h4").each(function(){
-  length
-	i++;
-	$(this).attr("href","#mixsin-"+i);
-});
-
-var i=0;
-	$(".cabinet_worker__item__list").each(function(){
-  length
-	i++;
-	$(this).attr("id","mixsin-"+i);
-});
-
-
-// directions_in id end
-$('.cabinet_worker__cart__list .cabinet_worker__item__list').hide();
-$('.cabinet_worker__cart__list .cabinet_worker__item__list:first').show();
-$('.cabinet_worker__menu li:first').addClass('active');
-
-// Change tab class and display content
-$('.cabinet_worker__menu h4').on('click', function(event){
-  event.preventDefault();
-  $('.cabinet_worker__menu li').removeClass('active');
-  $(this).parent().addClass('active');
-  $('.cabinet_worker__cart__list .cabinet_worker__item__list').hide();
-  $($(this).attr('href')).show();
-});
-
-$(function(){
-  let Catalog_max__pro__ul_link = document.querySelectorAll('.cabinet_worker__menu li');
+  let Catalog_max__pro__ul_link = document.querySelectorAll('.history__menu__link');
 
   for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
       Catalog_max__pro__ul_link[i].addEventListener('click',function(){
@@ -231,35 +90,10 @@ $(function(){
   }
 });
 
-$(document).ready(function(){
-  $('.cabinet_worker__menu li a').click(function(){
-    $('.cabinet_worker__item__list').fadeTo(500, 1)
-    $('.cabinet_worker__item__list').css('display','none');
-  })
-});
-
-
-// directions_in id end
-$('.cabinet_worker__list .cabinet_worker__list__item_id').hide();
-$('.cabinet_worker__list .cabinet_worker__list__item_id:first').show();
-$('.cabinet_worker__item__menu li:first').addClass('active');
-
-// Change tab class and display content
-$('.cabinet_worker__item__menu a').on('click', function(event){
-  event.preventDefault();
-  $('.cabinet_worker__item__menu li').removeClass('active');
-  $(this).parent().addClass('active');
-  $('.cabinet_worker__list .cabinet_worker__list__item_id').hide();
-  $($(this).attr('data-id')).show();
-});
-
-// -----===========----------------------------------------------------------
-
-
-// news start
+// -------------------------------===========-------------------------------
 
 $(function(){
-  let Catalog_max__pro__ul_link = document.querySelectorAll('.news_pagination__page');
+  let Catalog_max__pro__ul_link = document.querySelectorAll('.experts__pagination__link');
 
   for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
       Catalog_max__pro__ul_link[i].addEventListener('click',function(){
@@ -272,68 +106,35 @@ $(function(){
   }
 });
 
-// news end
+// -------------------------------===========-------------------------------
 
-// -----===========----------------------------------------------------------
-
-const welcom = document.querySelector('.technical_work');
-
-if(welcom){
-  setTimeout(()=>{
-    addStylesTo(welcom)
-  },8000)
-  
-  function addStylesTo(node){
-    node.style.display = 'none'
-  }
-
-  $(document).ready(function(){
-    $('.technical_work__botton').click(function(){
-      $('.technical_work').fadeTo(500, 1)
-      $('.technical_work').css('display','none');
-    })
-  });
-}
-
-
-// -------------------------------===========---------------------------------
-
-const checkPolicyError = document.querySelector('.check_policy__error');
-const checkPolicyBotton = document.querySelector('.check_policy__error__botton');
-
-if(checkPolicyError){
-  checkPolicyError.onclick = () =>{
-    setTimeout(()=>{
-      checkPolicyError.className = 'check_policy__error'
-    },8000)
-  }
-  
-  checkPolicyBotton.onclick = () =>{
-    checkPolicyError.className = 'check_policy__error'
-  }
-}
-
-
-const managementItemCart = document.querySelectorAll('.management__item__cart a, .management__none__dropdown');
-const managementFixed = document.querySelectorAll('.management__fixed');
-
-managementItemCart.forEach(function(button, index) {
-  button.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    this.parentNode.classList.toggle('active');
-    
-    managementItemCart.forEach(function(button2, index2) {
-      if ( index !== index2 ) {
-        button2.parentNode.classList.remove('active');
+$( ".centers_in__link__cart" ).click(function() {
+  $(this ).each(function( i ) {
+    if ( this.style.position !== "relative" ) {
+      this.style.position = "relative";
+      let Catalog_max__pro__ul_link = document.querySelectorAll('.centers_in__cart__item');
+      for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
+          Catalog_max__pro__ul_link[i].addEventListener('click',function(){
+              for(let j = 0; j<Catalog_max__pro__ul_link.length;j++){
+                  Catalog_max__pro__ul_link[j].classList.remove('centers_in__active');
+              }
+              this.classList.add('centers_in__active');
+          })
       }
-    });
+      
+    } else {
+      this.style.position = "";
+      let Catalog_max__pro__ul_link = document.querySelectorAll('.centers_in__cart__item');
+      for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
+          Catalog_max__pro__ul_link[i].addEventListener('click',function(){
+              for(let j = 0; j<Catalog_max__pro__ul_link.length;j++){
+                  Catalog_max__pro__ul_link[j].classList.remove('centers_in__active');
+              }
+              this.classList.add('centers_in__active_12');
+          })
+      }
+    }
   });
 });
 
-managementFixed.forEach(function(button) {
-  button.addEventListener('click', function(e) {
-    e.preventDefault();
-    this.parentNode.classList.remove('active');
-  });
-});
+// -------------------------------===========-------------------------------
