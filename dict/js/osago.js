@@ -17,6 +17,14 @@ if(osago){
     individuals.style.display = 'none'
 }
 
+if(osago){
+    function phoneMask() { 
+        var num = $(this).val().replace(/\D/g,''); 
+        $(this).val('+' + num.substring(0,1) +num.substring(1,4) +  num.substring(4,7) + num.substring(7,12)); 
+    }
+    $('[type="tel"]').keyup(phoneMask);
+}
+
 if(republic){
     const republicinput = republic.querySelectorAll('input')
     for(let i = 0; i <  republicinput.length;i++){
